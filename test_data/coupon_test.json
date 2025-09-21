@@ -1,0 +1,373 @@
+
+[
+  {
+    "id": "a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6",
+    "input": "Do I have any coupons?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+    "input": "How can I get a discount on my next order?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c3d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+    "input": "Is there a promo code I can use?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d4e5f6a7-b8c9-d0e1-f2a3-b4c5d6e7f8g9",
+    "input": "Where do I enter the coupon code?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e5f6a7b8-c9d0-e1f2-a3b4-c5d6e7f8g9h0",
+    "input": "Tell me about the current sales.",
+    "intent": "coupon"
+  },
+  {
+    "id": "f6a7b8c9-d0e1-f2a3-b4c5-d6e7f8g9h0i1",
+    "input": "Show me available coupons.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a7b8c9d0-e1f2-a3b4-c5d6-e7f8g9h0i1j2",
+    "input": "Are there any discounts for students?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b8c9d0e1-f2a3-b4c5-d6e7-f8g9h0i1j2k3",
+    "input": "Can I use this coupon on sale items?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c9d0e1f2-a3b4-c5d6-e7f8-g9h0i1j2k3l4",
+    "input": "What's the expiration date of this coupon?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d0e1f2a3-b4c5-d6e7-f8g9-h0i1j2k3l4m5",
+    "input": "How do I apply a discount code?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e1f2a3b4-c5d6-e7f8-g9h0-i1j2k3l4m5n6",
+    "input": "Do you have any special offers for new customers?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f2a3b4c5-d6e7-f8g9-h0i1-j2k3l4m5n6o7",
+    "input": "My promo code isn't working.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a3b4c5d6-e7f8-g9h0-i1j2-k3l4m5n6o7p8",
+    "input": "Can I combine multiple coupons?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b4c5d6e7-f8g9-h0i1-j2k3-l4m5n6o7p8q9",
+    "input": "Where can I find coupons?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c5d6e7f8-g9h0-i1j2-k3l4-m5n6o7p8q9r0",
+    "input": "Are there any promotions happening now?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d6e7f8g9-h0i1-j2k3-l4m5-n6o7p8q9r0s1",
+    "input": "How much can I save with this coupon?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e7f8g9h0-i1j2-k3l4-m5n6-o7p8q9r0s1t2",
+    "input": "Is this coupon valid for online orders?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f8g9h0i1-j2k3-l4m5-n6o7-p8q9r0s1t2u3",
+    "input": "Do I get a discount for my birthday?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a9h0i1j2-k3l4-m5n6-o7p8-q9r0s1t2u3v4",
+    "input": "Can you apply the coupon for me?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b0i1j2k3-l4m5-n6o7-p8q9-r0s1t2u3v4w5",
+    "input": "I forgot to apply my coupon, can you help?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c1j2k3l4-m5n6-o7p8-q9r0-s1t2u3v4w5x6",
+    "input": "What are the terms and conditions of this promo code?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d2k3l4m5-n6o7-p8q9-r0s1-t2u3v4w5x6y7",
+    "input": "How do I get a promo code?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e3l4m5n6-o7p8-q9r0-s1t2-u3v4w5x6y7z8",
+    "input": "Are there any coupons for free delivery?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f4m5n6o7-p8q9-r0s1-t2u3-v4w5x6y7z8a9",
+    "input": "Can I use a coupon to book a venue?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a5n6o7p8-q9r0-s1t2-u3v4-w5x6y7z8a9b0",
+    "input": "I have a coupon code, where do I use it?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b6o7p8q9-r0s1-t2u3-v4w5-x6y7z8a9b0c1",
+    "input": "Do you offer any discounts for bulk orders?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c7p8q9r0-s1t2-u3v4-w5x6-y7z8a9b0c1d2",
+    "input": "Is there a discount for signing up for the newsletter?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d8q9r0s1-t2u3-v4w5-x6y7-z8a9b0c1d2e3",
+    "input": "How can I find out about future sales?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e9r0s1t2-u3v4-w5x6-y7z8-a9b0c1d2e3f4",
+    "input": "Can I get a discount if I refer a friend?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f0s1t2u3-v4w5-x6y7-z8a9-b0c1d2e3f4g5",
+    "input": "Do you have any military discounts?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a1t2u3v4-w5x6-y7z8-a9b0-c1d2e3f4g5h6",
+    "input": "Is there a senior discount?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b2u3v4w5-x6y7-z8a9-b0c1-d2e3f4g5h6i7",
+    "input": "I saw a promotion online, can you tell me more about it?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c3v4w5x6-y7z8-a9b0-c1d2-e3f4g5h6i7j8",
+    "input": "How long is this sale going on for?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d4w5x6y7-z8a9-b0c1-d2e3-f4g5h6i7j8k9",
+    "input": "Can I get a price adjustment on a recent purchase?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e5x6y7z8-a9b0-c1d2-e3f4-g5h6i7j8k9l0",
+    "input": "Do you have a loyalty program with discounts?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f6y7z8a9-b0c1-d2e3-f4g5-h6i7j8k9l0m1",
+    "input": "Are there any coupons in the app?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a7z8a9b0-c1d2-e3f4-g5h6-i7j8k9l0m1n2",
+    "input": "How do I get on the mailing list for coupons?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b8a9b0c1-d2e3-f4g5-h6i7-j8k9l0m1n2o3",
+    "input": "Can I use a gift card and a coupon on the same order?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c9b0c1d2-e3f4-g5h6-i7j8-k9l0m1n2o3p4",
+    "input": "Do you price match?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d0c1d2e3-f4g5-h6i7-j8k9-l0m1n2o3p4q5",
+    "input": "What items are excluded from this coupon?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e1d2e3f4-g5h6-i7j8-k9l0-m1n2o3p4q5r6",
+    "input": "Is there a limit to how many times I can use this coupon?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f2e3f4g5-h6i7-j8k9-l0m1-n2o3p4q5r6s7",
+    "input": "Can I share my coupon with someone else?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a3f4g5h6-i7j8-k9l0-m1n2-o3p4q5r6s7t8",
+    "input": "Do you have any coupons for my next visit?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b4g5h6i7-j8k9-l0m1-n2o3-p4q5r6s7t8u9",
+    "input": "I was supposed to get a discount, but I don't see it.",
+    "intent": "coupon"
+  },
+  {
+    "id": "c5h6i7j8-k9l0-m1n2-o3p4-q5r6s7t8u9v0",
+    "input": "How can I get a bigger discount?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d6i7j8k9-l0m1-n2o3-p4q5-r6s7t8u9v0w1",
+    "input": "Are there any upcoming sales I should know about?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e7j8k9l0-m1n2-o3p4-q5r6-s7t8u9v0w1x2",
+    "input": "Can I get a discount for paying in cash?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f8k9l0m1-n2o3-p4q5-r6s7-t8u9v0w1x2y3",
+    "input": "Do you have any coupons for local residents?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a9l0m1n2-o3p4-q5r6-s7t8-u9v0w1x2y3z4",
+    "input": "I'm a returning customer, are there any special discounts for me?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b0m1n2o3-p4q5-r6s7-t8u9-v0w1x2y3z4a5",
+    "input": "Can I get a discount for leaving a review?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c1n2o3p4-q5r6-s7t8-u9v0-w1x2y3z4a5b6",
+    "input": "Do you have any coupons for my favorite brand?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d2o3p4q5-r6s7-t8u9-v0w1-x2y3z4a5b6c7",
+    "input": "I have a coupon that expired yesterday, can I still use it?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e3p4q5r6-s7t8-u9v0-w1x2-y3z4a5b6c7d8",
+    "input": "Can I use a coupon from another store?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f4q5r6s7-t8u9-v0w1-x2y3-z4a5b6c7d8e9",
+    "input": "Do you have any coupons for online courses?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a5r6s7t8-u9v0-w1x2-y3z4-a5b6c7d8e9f0",
+    "input": "I'm looking for a coupon for a specific product.",
+    "intent": "coupon"
+  },
+  {
+    "id": "b6s7t8u9-v0w1-x2y3-z4a5-b6c7d8e9f0g1",
+    "input": "Can I get a discount if I buy two?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c7t8u9v0-w1x2-y3z4-a5b6-c7d8e9f0g1h2",
+    "input": "Do you have any coupons for the holidays?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d8u9v0w1-x2y3-z4a5-b6c7-d8e9f0g1h2i3",
+    "input": "I'm a member, do I get any exclusive coupons?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e9v0w1x2-y3z4-a5b6-c7d8-e9f0g1h2i3j4",
+    "input": "Can I use a coupon on a pre-order?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f0w1x2y3-z4a5-b6c7-d8e9-f0g1h2i3j4k5",
+    "input": "Do you have any coupons for in-store pickup?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a1x2y3z4-a5b6-c7d8-e9f0-g1h2i3j4k5l6",
+    "input": "I have a coupon from a magazine, can I use it online?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b2y3z4a5-b6c7-d8e9-f0g1-h2i3j4k5l6m7",
+    "input": "Can I get a rain check for this coupon?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c3z4a5b6-c7d8-e9f0-g1h2-i3j4k5l6m7n8",
+    "input": "Do you have any coupons for your mobile app?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d4a5b6c7-d8e9-f0g1-h2i3-j4k5l6m7n8o9",
+    "input": "I'm having trouble applying my coupon, can you help?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e5b6c7d8-e9f0-g1h2-i3j4-k5l6m7n8o9p0",
+    "input": "Can I use a coupon on a gift subscription?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f6c7d8e9-f0g1-h2i3-j4k5-l6m7n8o9p0q1",
+    "input": "Do you have any coupons for a specific event?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a7d8e9f0-g1h2-i3j4-k5l6-m7n8o9p0q1r2",
+    "input": "I'm looking for a coupon for a hotel.",
+    "intent": "coupon"
+  },
+  {
+    "id": "b8e9f0g1-h2i3-j4k5-l6m7-n8o9p0q1r2s3",
+    "input": "Can I get a discount on a flight?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c9f0g1h2-i3j4-k5l6-m7n8-o9p0q1r2s3t4",
+    "input": "Do you have any coupons for car rentals?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d0g1h2i3-j4k5-l6m7-n8o9-p0q1r2s3t4u5",
+    "input": "I'm looking for a coupon for a restaurant.",
+    "intent": "coupon"
+  },
+  {
+    "id": "e1h2i3j4-k5l6-m7n8-o9p0-q1r2s3t4u5v6",
+    "input": "Can I get a discount on tickets for a show?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f2i3j4k5-l6m7-n8o9-p0q1-r2s3t4u5v6w7",
+    "input": "Do you have any coupons for a spa?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a3j4k5l6-m7n8-o9p0-q1r2-s3t4u5v6w7x8",
+    "input": "I'm looking for a coupon for a gym membership.",
+    "intent": "coupon"
+  },
+  {
+    "id": "b4k5l6m7-n8o9-p0q1-r2s3-t4u5v6w7x8y9",
+    "input": "Can I get a discount on a subscription box?",
+    "intent": "coupon"
+  }
+]

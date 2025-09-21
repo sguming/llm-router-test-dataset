@@ -1,0 +1,373 @@
+
+[
+  {
+    "id": "a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6",
+    "input": "Any way to save some money on this?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+    "input": "Is this the best price you can do?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c3d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+    "input": "Hook me up with a deal.",
+    "intent": "coupon"
+  },
+  {
+    "id": "d4e5f6a7-b8c9-d0e1-f2a3-b4c5d6e7f8g9",
+    "input": "I'm on a budget, any help?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e5f6a7b8-c9d0-e1f2-a3b4-c5d6e7f8g9h0",
+    "input": "Got any specials running?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f6a7b8c9-d0e1-f2a3-b4c5-d6e7f8g9h0i1",
+    "input": "Can you give me a better price?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a7b8c9d0-e1f2-a3b4-c5d6-e7f8g9h0i1j2",
+    "input": "Is there any way to get this cheaper?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b8c9d0e1-f2a3-b4c5-d6e7-f8g9h0i1j2k3",
+    "input": "I'm looking for a good deal.",
+    "intent": "coupon"
+  },
+  {
+    "id": "c9d0e1f2-a3b4-c5d6-e7f8-g9h0i1j2k3l4",
+    "input": "What's the lowest you can go?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d0e1f2a3-b4c5-d6e7-f8g9-h0i1j2k3l4m5",
+    "input": "Any promotions I can take advantage of?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e1f2a3b4-c5d6-e7f8-g9h0-i1j2k3l4m5n6",
+    "input": "Help me save some cash.",
+    "intent": "coupon"
+  },
+  {
+    "id": "f2a3b4c5-d6e7-f8g9-h0i1-j2k3l4m5n6o7",
+    "input": "I need a discount.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a3b4c5d6-e7f8-g9h0-i1j2-k3l4m5n6o7p8",
+    "input": "Can you cut me a break on the price?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b4c5d6e7-f8g9-h0i1-j2k3-l4m5n6o7p8q9",
+    "input": "Is there a friends and family discount?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c5d6e7f8-g9h0-i1j2-k3l4-m5n6o7p8q9r0",
+    "input": "I'm a loyal customer, can I get a special offer?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d6e7f8g9-h0i1-j2k3-l4m5-n6o7p8q9r0s1",
+    "input": "What deals do you have for me?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e7f8g9h0-i1j2-k3l4-m5n6-o7p8q9r0s1t2",
+    "input": "I'm trying to be frugal.",
+    "intent": "coupon"
+  },
+  {
+    "id": "f8g9h0i1-j2k3-l4m5-n6o7-p8q9r0s1t2u3",
+    "input": "Can I get a price reduction?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a9h0i1j2-k3l4-m5n6-o7p8-q9r0s1t2u3v4",
+    "input": "Is there a way to make this more affordable?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b0i1j2k3-l4m5-n6o7-p8q9-r0s1t2u3v4w5",
+    "input": "I'm looking for a bargain.",
+    "intent": "coupon"
+  },
+  {
+    "id": "c1j2k3l4-m5n6-o7p8-q9r0-s1t2u3v4w5x6",
+    "input": "Can you do anything about the price?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d2k3l4m5-n6o7-p8q9-r0s1-t2u3v4w5x6y7",
+    "input": "I'm a bit short on cash, any wiggle room?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e3l4m5n6-o7p8-q9r0-s1t2-u3v4w5x6y7z8",
+    "input": "What's the most economical option?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f4m5n6o7-p8q9-r0s1-t2u3-v4w5x6y7z8a9",
+    "input": "I'm trying to watch my spending.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a5n6o7p8-q9r0-s1t2-u3v4-w5x6y7z8a9b0",
+    "input": "Can you make it a bit cheaper for me?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b6o7p8q9-r0s1-t2u3-v4w5-x6y7z8a9b0c1",
+    "input": "I'm looking for a steal.",
+    "intent": "coupon"
+  },
+  {
+    "id": "c7p8q9r0-s1t2-u3v4-w5x6-y7z8a9b0c1d2",
+    "input": "Is there a way to get a better deal?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d8q9r0s1-t2u3-v4w5-x6y7-z8a9b0c1d2e3",
+    "input": "I'm trying to be a savvy shopper.",
+    "intent": "coupon"
+  },
+  {
+    "id": "e9r0s1t2-u3v4-w5x6-y7z8-a9b0c1d2e3f4",
+    "input": "Can you offer me a special price?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f0s1t2u3-v4w5-x6y7-z8a9-b0c1d2e3f4g5",
+    "input": "I'm looking for a good value.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a1t2u3v4-w5x6-y7z8-a9b0-c1d2e3f4g5h6",
+    "input": "Is there any room for negotiation on the price?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b2u3v4w5-x6y7-z8a9-b0c1-d2e3f4g5h6i7",
+    "input": "I'm trying to be economical.",
+    "intent": "coupon"
+  },
+  {
+    "id": "c3v4w5x6-y7z8-a9b0-c1d2-e3f4g5h6i7j8",
+    "input": "Can you sweeten the deal for me?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d4w5x6y7-z8a9-b0c1-d2e3-f4g5h6i7j8k9",
+    "input": "I'm looking for a price break.",
+    "intent": "coupon"
+  },
+  {
+    "id": "e5x6y7z8-a9b0-c1d2-e3f4-g5h6i7j8k9l0",
+    "input": "Is there a way to lower the cost?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f6y7z8a9-b0c1-d2e3-f4g5-h6i7j8k9l0m1",
+    "input": "I'm trying to be a smart consumer.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a7z8a9b0-c1d2-e3f4-g5h6-i7j8k9l0m1n2",
+    "input": "Can you give me a friendly discount?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b8a9b0c1-d2e3-f4g5-h6i7-j8k9l0m1n2o3",
+    "input": "I'm looking for a hot deal.",
+    "intent": "coupon"
+  },
+  {
+    "id": "c9b0c1d2-e3f4-g5h6-i7j8-k9l0m1n2o3p4",
+    "input": "Is there any way to get a markdown?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d0c1d2e3-f4g5-h6i7-j8k9-l0m1n2o3p4q5",
+    "input": "I'm trying to be a thrifty shopper.",
+    "intent": "coupon"
+  },
+  {
+    "id": "e1d2e3f4-g5h6-i7j8-k9l0-m1n2o3p4q5r6",
+    "input": "Can you knock a few bucks off?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f2e3f4g5-h6i7-j8k9-l0m1-n2o3p4q5r6s7",
+    "input": "I'm looking for a real bargain.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a3f4g5h6-i7j8-k9l0-m1n2-o3p4q5r6s7t8",
+    "input": "Is there a way to get a rebate?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b4g5h6i7-j8k9-l0m1-n2o3-p4q5r6s7t8u9",
+    "input": "I'm trying to be a careful spender.",
+    "intent": "coupon"
+  },
+  {
+    "id": "c5h6i7j8-k9l0-m1n2-o3p4-q5r6s7t8u9v0",
+    "input": "Can you give me a price cut?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d6i7j8k9-l0m1-n2o3-p4q5-r6s7t8u9v0w1",
+    "input": "I'm looking for a good offer.",
+    "intent": "coupon"
+  },
+  {
+    "id": "e7j8k9l0-m1n2-o3p4-q5r6-s7t8u9v0w1x2",
+    "input": "Is there a way to get a price concession?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f8k9l0m1-n2o3-p4q5-r6s7-t8u9v0w1x2y3",
+    "input": "I'm trying to be a budget-conscious shopper.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a9l0m1n2-o3p4-q5r6-s7t8-u9v0w1x2y3z4",
+    "input": "Can you give me a special deal?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b0m1n2o3-p4q5-r6s7-t8u9-v0w1x2y3z4a5",
+    "input": "I'm looking for a great value.",
+    "intent": "coupon"
+  },
+  {
+    "id": "c1n2o3p4-q5r6-s7t8-u9v0-w1x2y3z4a5b6",
+    "input": "Is there a way to get a price reduction?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d2o3p4q5-r6s7-t8u9-v0w1-x2y3z4a5b6c7",
+    "input": "I'm trying to be a price-sensitive customer.",
+    "intent": "coupon"
+  },
+  {
+    "id": "e3p4q5r6-s7t8-u9v0-w1x2-y3z4a5b6c7d8",
+    "input": "Can you give me a better offer?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f4q5r6s7-t8u9-v0w1-x2y3-z4a5b6c7d8e9",
+    "input": "I'm looking for a fantastic deal.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a5r6s7t8-u9v0-w1x2-y3z4-a5b6c7d8e9f0",
+    "input": "Is there a way to get a price break?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b6s7t8u9-v0w1-x2y3-z4a5-b6c7d8e9f0g1",
+    "input": "I'm trying to be a cost-conscious consumer.",
+    "intent": "coupon"
+  },
+  {
+    "id": "c7t8u9v0-w1x2-y3z4-a5b6-c7d8e9f0g1h2",
+    "input": "Can you give me a more attractive price?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d8u9v0w1-x2y3-z4a5-b6c7-d8e9f0g1h2i3",
+    "input": "I'm looking for a super deal.",
+    "intent": "coupon"
+  },
+  {
+    "id": "e9v0w1x2-y3z4-a5b6-c7d8-e9f0g1h2i3j4",
+    "input": "Is there a way to get a special discount?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f0w1x2y3-z4a5-b6c7-d8e9-f0g1h2i3j4k5",
+    "input": "I'm trying to be a money-saving shopper.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a1x2y3z4-a5b6-c7d8-e9f0-g1h2i3j4k5l6",
+    "input": "Can you give me a reduced price?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b2y3z4a5-b6c7-d8e9-f0g1-h2i3j4k5l6m7",
+    "input": "I'm looking for an amazing deal.",
+    "intent": "coupon"
+  },
+  {
+    "id": "c3z4a5b6-c7d8-e9f0-g1h2-i3j4k5l6m7n8",
+    "input": "Is there a way to get a lower price?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d4a5b6c7-d8e9-f0g1-h2i3-j4k5l6m7n8o9",
+    "input": "I'm trying to be a budget-minded shopper.",
+    "intent": "coupon"
+  },
+  {
+    "id": "e5b6c7d8-e9f0-g1h2-i3j4-k5l6m7n8o9p0",
+    "input": "Can you give me a better deal?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f6c7d8e9-f0g1-h2i3-j4k5-l6m7n8o9p0q1",
+    "input": "I'm looking for a killer deal.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a7d8e9f0-g1h2-i3j4-k5l6-m7n8o9p0q1r2",
+    "input": "Is there a way to get a special offer?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b8e9f0g1-h2i3-j4k5-l6m7-n8o9p0q1r2s3",
+    "input": "I'm trying to be a value-conscious shopper.",
+    "intent": "coupon"
+  },
+  {
+    "id": "c9f0g1h2-i3j4-k5l6-m7n8-o9p0q1r2s3t4",
+    "input": "Can you give me a discounted rate?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d0g1h2i3-j4k5-l6m7-n8o9-p0q1r2s3t4u5",
+    "input": "I'm looking for a great bargain.",
+    "intent": "coupon"
+  },
+  {
+    "id": "e1h2i3j4-k5l6-m7n8-o9p0-q1r2s3t4u5v6",
+    "input": "Is there a way to get a promotional price?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f2i3j4k5-l6m7-n8o9-p0q1-r2s3t4u5v6w7",
+    "input": "I'm trying to be a deal-savvy shopper.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a3j4k5l6-m7n8-o9p0-q1r2-s3t4u5v6w7x8",
+    "input": "Can you give me a special rate?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b4k5l6m7-n8o9-p0q1-r2s3-t4u5v6w7x8y9",
+    "input": "I'm looking for a fantastic bargain.",
+    "intent": "coupon"
+  }
+]

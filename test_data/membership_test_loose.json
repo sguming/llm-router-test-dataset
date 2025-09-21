@@ -1,0 +1,358 @@
+
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+    "input": "my status?",
+    "intent": "membership"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-2345-67890abcdef0",
+    "input": "any deals?",
+    "intent": "membership"
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-3456-7890abcdef01",
+    "input": "what are the perks for me?",
+    "intent": "membership"
+  },
+  {
+    "id": "d4e5f6a7-b8c9-0123-4567-890abcdef012",
+    "input": "can i get a discount at that coffee place?",
+    "intent": "membership"
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1234-5678-90abcdef0123",
+    "input": "do i have any points?",
+    "intent": "membership"
+  },
+  {
+    "id": "f6a7b8c9-d0e1-2345-6789-0abcdef01234",
+    "input": "youth benefits",
+    "intent": "membership"
+  },
+  {
+    "id": "a7b8c9d0-e1f2-3456-7890-1abcdef012345",
+    "input": "show me my rewards",
+    "intent": "membership"
+  },
+  {
+    "id": "b8c9d0e1-f2a3-4567-8901-bcdef0123456",
+    "input": "any special offers?",
+    "intent": "membership"
+  },
+  {
+    "id": "c9d0e1f2-a3b4-5678-9012-cdef01234567",
+    "input": "what's my level?",
+    "intent": "membership"
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6789-0123-def012345678",
+    "input": "can I save money?",
+    "intent": "membership"
+  },
+  {
+    "id": "e1f2a3b4-c5d6-7890-1234-ef0123456789",
+    "input": "do I get anything for being a member?",
+    "intent": "membership"
+  },
+  {
+    "id": "f2a3b4c5-d6e7-8901-2345-f01234567890",
+    "input": "student perks",
+    "intent": "membership"
+  },
+  {
+    "id": "a3b4c5d6-e7f8-9012-3456-01234567890a",
+    "input": "tell me about the loyalty program",
+    "intent": "membership"
+  },
+  {
+    "id": "b4c5d6e7-f8a9-0123-4567-1234567890ab",
+    "input": "any advantages for me?",
+    "intent": "membership"
+  },
+  {
+    "id": "c5d6e7f8-a9b0-1234-5678-234567890abc",
+    "input": "is there a discount for Nike?",
+    "intent": "membership"
+  },
+  {
+    "id": "d6e7f8a9-b0c1-2345-6789-34567890abcd",
+    "input": "how many points do I have?",
+    "intent": "membership"
+  },
+  {
+    "id": "e7f8a9b0-c1d2-3456-7890-4567890abcde",
+    "input": "what are the benefits?",
+    "intent": "membership"
+  },
+  {
+    "id": "f8a9b0c1-d2e3-4567-8901-567890abcdef",
+    "input": "senior discount?",
+    "intent": "membership"
+  },
+  {
+    "id": "a9b0c1d2-e3f4-5678-9012-67890abcdef0",
+    "input": "show me my coupons",
+    "intent": "membership"
+  },
+  {
+    "id": "b0c1d2e3-f4a5-6789-0123-7890abcdef01",
+    "input": "what's in it for me?",
+    "intent": "membership"
+  },
+  {
+    "id": "c1d2e3f4-a5b6-7890-1234-890abcdef012",
+    "input": "can I get a deal on food?",
+    "intent": "membership"
+  },
+  {
+    "id": "d2e3f4a5-b6c7-8901-2345-90abcdef0123",
+    "input": "do I have any vouchers?",
+    "intent": "membership"
+  },
+  {
+    "id": "e3f4a5b6-c7d8-9012-3456-0abcdef01234",
+    "input": "family benefits",
+    "intent": "membership"
+  },
+  {
+    "id": "f4a5b6c7-d8e9-0123-4567-abcdef012345",
+    "input": "tell me about member savings",
+    "intent": "membership"
+  },
+  {
+    "id": "a5b6c7d8-e9f0-1234-5678-bcdef0123456",
+    "input": "any exclusive offers?",
+    "intent": "membership"
+  },
+  {
+    "id": "b6c7d8e9-f0a1-2345-6789-cdef01234567",
+    "input": "is there a partnership with Adidas?",
+    "intent": "membership"
+  },
+  {
+    "id": "c7d8e9f0-a1b2-3456-7890-def012345678",
+    "input": "what's my tier?",
+    "intent": "membership"
+  },
+  {
+    "id": "d8e9f0a1-b2c3-4567-8901-ef0123456789",
+    "input": "any free stuff?",
+    "intent": "membership"
+  },
+  {
+    "id": "e9f0a1b2-c3d4-5678-9012-f01234567890",
+    "input": "military discount?",
+    "intent": "membership"
+  },
+  {
+    "id": "f0a1b2c3-d4e5-6789-0123-01234567890a",
+    "input": "show me my deals",
+    "intent": "membership"
+  },
+  {
+    "id": "a1b2c3d4-e5f6-7890-1234-1234567890ab",
+    "input": "what do I get?",
+    "intent": "membership"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-2345-234567890abc",
+    "input": "can I get a discount on travel?",
+    "intent": "membership"
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-3456-34567890abcd",
+    "input": "do I have any codes?",
+    "intent": "membership"
+  },
+  {
+    "id": "d4e5f6a7-b8c9-0123-4567-4567890abcde",
+    "input": "benefits for me",
+    "intent": "membership"
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1234-5678-567890abcdef",
+    "input": "tell me about the rewards program",
+    "intent": "membership"
+  },
+  {
+    "id": "f6a7b8c9-d0e1-2345-6789-67890abcdef0",
+    "input": "any special deals for members?",
+    "intent": "membership"
+  },
+  {
+    "id": "a7b8c9d0-e1f2-3456-7890-7890abcdef01",
+    "input": "is there a discount for Apple?",
+    "intent": "membership"
+  },
+  {
+    "id": "b8c9d0e1-f2a3-4567-8901-890abcdef012",
+    "input": "what's my membership level?",
+    "intent": "membership"
+  },
+  {
+    "id": "c9d0e1f2-a3b4-5678-9012-90abcdef0123",
+    "input": "any freebies?",
+    "intent": "membership"
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6789-0123-0abcdef01234",
+    "input": "employee discount?",
+    "intent": "membership"
+  },
+  {
+    "id": "e1f2a3b4-c5d6-7890-1234-abcdef012345",
+    "input": "show me my offers",
+    "intent": "membership"
+  },
+  {
+    "id": "f2a3b4c5-d6e7-8901-2345-bcdef0123456",
+    "input": "what are the advantages?",
+    "intent": "membership"
+  },
+  {
+    "id": "a3b4c5d6-e7f8-9012-3456-cdef01234567",
+    "input": "can I get a discount on electronics?",
+    "intent": "membership"
+  },
+  {
+    "id": "b4c5d6e7-f8a9-0123-4567-def012345678",
+    "input": "do I have any special privileges?",
+    "intent": "membership"
+  },
+  {
+    "id": "c5d6e7f8-a9b0-1234-5678-ef0123456789",
+    "input": "birthday perks",
+    "intent": "membership"
+  },
+  {
+    "id": "d6e7f8a9-b0c1-2345-6789-f01234567890",
+    "input": "tell me about the points system",
+    "intent": "membership"
+  },
+  {
+    "id": "e7f8a9b0-c1d2-3456-7890-01234567890a",
+    "input": "any member-only deals?",
+    "intent": "membership"
+  },
+  {
+    "id": "f8a9b0c1-d2e3-4567-8901-1234567890ab",
+    "input": "is there a partnership with Samsung?",
+    "intent": "membership"
+  },
+  {
+    "id": "a9b0c1d2-e3f4-5678-9012-234567890abc",
+    "input": "what's my program status?",
+    "intent": "membership"
+  },
+  {
+    "id": "b0c1d2e3-f4a5-6789-0123-34567890abcd",
+    "input": "any free gifts?",
+    "intent": "membership"
+  },
+  {
+    "id": "c1d2e3f4-a5b6-7890-1234-4567890abcde",
+    "input": "teacher discount?",
+    "intent": "membership"
+  },
+  {
+    "id": "d2e3f4a5-b6c7-8901-2345-567890abcdef",
+    "input": "show me my vouchers",
+    "intent": "membership"
+  },
+  {
+    "id": "e3f4a5b6-c7d8-9012-3456-67890abcdef0",
+    "input": "what are the member benefits?",
+    "intent": "membership"
+  },
+  {
+    "id": "f4a5b6c7-d8e9-0123-4567-7890abcdef01",
+    "input": "can I get a discount on clothes?",
+    "intent": "membership"
+  },
+  {
+    "id": "a5b6c7d8-e9f0-1234-5678-890abcdef012",
+    "input": "do I have any special status?",
+    "intent": "membership"
+  },
+  {
+    "id": "b6c7d8e9-f0a1-2345-6789-90abcdef0123",
+    "input": "new member benefits",
+    "intent": "membership"
+  },
+  {
+    "id": "c7d8e9f0-a1b2-3456-7890-0abcdef01234",
+    "input": "tell me about the loyalty benefits",
+    "intent": "membership"
+  },
+  {
+    "id": "d8e9f0a1-b2c3-4567-8901-abcdef012345",
+    "input": "any special promotions?",
+    "intent": "membership"
+  },
+  {
+    "id": "e9f0a1b2-c3d4-5678-9012-bcdef0123456",
+    "input": "is there a partnership with Amazon?",
+    "intent": "membership"
+  },
+  {
+    "id": "f0a1b2c3-d4e5-6789-0123-cdef01234567",
+    "input": "what's my reward status?",
+    "intent": "membership"
+  },
+  {
+    "id": "a1b2c3d4-e5f6-7890-1234-def012345678",
+    "input": "any free samples?",
+    "intent": "membership"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-2345-ef0123456789",
+    "input": "first responder discount?",
+    "intent": "membership"
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-3456-f01234567890",
+    "input": "show me my rewards points",
+    "intent": "membership"
+  },
+  {
+    "id": "d4e5f6a7-b8c9-0123-4567-01234567890a",
+    "input": "what are the loyalty perks?",
+    "intent": "membership"
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1234-5678-1234567890ab",
+    "input": "can I get a discount on books?",
+    "intent": "membership"
+  },
+  {
+    "id": "f6a7b8c9-d0e1-2345-6789-234567890abc",
+    "input": "do I have any special access?",
+    "intent": "membership"
+  },
+  {
+    "id": "a7b8c9d0-e1f2-3456-7890-34567890abcd",
+    "input": "VIP benefits",
+    "intent": "membership"
+  },
+  {
+    "id": "b8c9d0e1-f2a3-4567-8901-4567890abcde",
+    "input": "tell me about the member offers",
+    "intent": "membership"
+  },
+  {
+    "id": "c9d0e1f2-a3b4-5678-9012-567890abcdef",
+    "input": "any unadvertised benefits?",
+    "intent": "membership"
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6789-0123-67890abcdef0",
+    "input": "is there a partnership with Starbucks?",
+    "intent": "membership"
+  },
+  {
+    "id": "e1f2a3b4-c5d6-7890-1234-7890abcdef01",
+    "input": "what's my loyalty status?",
+    "intent": "membership"
+  }
+]
