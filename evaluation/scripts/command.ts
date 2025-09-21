@@ -24,7 +24,7 @@ const HELP_MESSAGE = `
 `;
 
 // Parse command line arguments
-function parseArgs(): CLIOptions {
+export function parseArgs(): CLIOptions {
   try {
     const args = process.argv.slice(2);
 
@@ -121,7 +121,7 @@ async function main() {
 
 main();
 
-function validateType(type: string): "test" | "loose" {
+export function validateType(type: string): "test" | "loose" {
   if (type === "test" || type === "loose") {
     return type;
   }
