@@ -1,0 +1,28 @@
+
+[
+  { "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef", "input": "What is the current status of my order?", "intent": "delivery status" },
+  { "id": "b2c3d4e5-f6a7-8901-2345-67890abcdef1", "input": "Can you tell me where my package is?", "intent": "delivery status" },
+  { "id": "c3d4e5f6-a7b8-9012-3456-7890abcdef12", "input": "I need to track my shipment.", "intent": "delivery status" },
+  { "id": "d4e5f6a7-b8c9-0123-4567-890abcdef123", "input": "Provide me with the delivery details for order #98765.", "intent": "delivery status" },
+  { "id": "e5f6a7b8-c9d0-1234-5678-90abcdef1234", "input": "Has my order been dispatched yet?", "intent": "delivery status" },
+  { "id": "f6a7b8c9-d0e1-2345-6789-0abcdef12345", "input": "Show me the tracking information for my recent purchase.", "intent": "delivery status" },
+  { "id": "a7b8c9d0-e1f2-3456-7890-abcdef123456", "input": "When can I expect my delivery to arrive?", "intent": "delivery status" },
+  { "id": "b8c9d0e1-f2a3-4567-8901-bcdef1234567", "input": "Is there an estimated delivery time for my package?", "intent": "delivery status" },
+  { "id": "c9d0e1f2-a3b4-5678-9012-cdef12345678", "input": "My order seems to be delayed, can you check?", "intent": "delivery status" },
+  { "id": "d0e1f2a3-b4c5-6789-0123-def123456789", "input": "I haven't received my package, what should I do?", "intent": "delivery status" },
+  { "id": "e1f2a3b4-c5d6-7890-1234-ef1234567890", "input": "Confirm if my shipment was delivered.", "intent": "delivery status" },
+  { "id": "f2a3b4c5-d6e7-8901-2345-f12345678901", "input": "I need proof of delivery for my last order.", "intent": "delivery status" },
+  { "id": "a3b4c5d6-e7f8-9012-3456-123456789012", "input": "Who is the courier for my shipment?", "intent": "delivery status" },
+  { "id": "b4c5d6e7-f8a9-0123-4567-234567890123", "input": "Check the status of shipment with tracking ID XYZ123.", "intent": "delivery status" },
+  { "id": "c5d6e7f8-a9b0-1234-5678-345678901234", "input": "Tell me the location of my package.", "intent": "delivery status" },
+  { "id": "d6e7f8a9-b0c1-2345-6789-456789012345", "input": "I want to know the delivery progress.", "intent": "delivery status" },
+  { "id": "e7f8a9b0-c1d2-3456-7890-567890123456", "input": "Can I get updates on my delivery?", "intent": "delivery status" },
+  { "id": "f8a9b0c1-d2e3-4567-8901-678901234567", "input": "What's the reason for the delay in my order?", "intent": "delivery status" },
+  { "id": "a9b0c1d2-e3f4-5678-9012-789012345678", "input": "Is my package out for delivery today?", "intent": "delivery status" },
+  { "id": "b0c1d2e3-f4a5-6789-0123-890123456789", "input": "My tracking number is 555-SHIP. What's the status?", "intent": "delivery status" },
+  { "id": "c1d2e3f4-a5b6-7890-1234-901234567890", "input": "I'm checking on the status of an order I placed last week.", "intent": "delivery status" },
+  { "id": "d2e3f4a5-b6c7-8901-2345-012345678901", "input": "Please verify the delivery address for my order.", "intent": "delivery status" },
+  { "id": "e3f4a5b6-c7d8-9012-3456-123456789012", "input": "The tracking page isn't updating, can you help?", "intent": "delivery status" },
+  { "id": "f4a5b6c7-d8e9-0123-4567-234567890123", "input": "Send me a notification when my package is near.", "intent": "delivery status" },
+  { "id": "a5b6c7d8-e9f0-1234-5678-345678901234", "input": "I think my package might be lost.", "intent": "delivery status" }
+]

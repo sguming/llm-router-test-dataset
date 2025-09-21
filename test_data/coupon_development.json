@@ -1,0 +1,128 @@
+
+[
+  {
+    "id": "f0c5d3a3-6b7e-4a3b-9f0e-3b9a1b3a4c6d",
+    "input": "Do I have any active coupons?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6",
+    "input": "Show me my available discounts.",
+    "intent": "coupon"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+    "input": "Is there a promo code for free shipping?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c3d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+    "input": "How do I apply a coupon to my order?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d4e5f6a7-b8c9-d0e1-f2a3-b4c5d6e7f8g9",
+    "input": "Where can I find the coupon code?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e5f6a7b8-c9d0-e1f2-a3b4-c5d6e7f8g9h0",
+    "input": "What are the conditions for this discount?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f6a7b8c9-d0e1-f2a3-b4c5-d6e7f8g9h0i1",
+    "input": "Tell me about the current promotions.",
+    "intent": "coupon"
+  },
+  {
+    "id": "a7b8c9d0-e1f2-a3b4-c5d6-e7f8g9h0i1j2",
+    "input": "Are there any sales going on right now?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b8c9d0e1-f2a3-b4c5-d6e7-f8g9h0i1j2k3",
+    "input": "Can I use a coupon for my next purchase?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c9d0e1f2-a3b4-c5d6-e7f8-g9h0i1j2k3l4",
+    "input": "I have a coupon, how do I use it?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d0e1f2a3-b4c5-d6e7-f8g9-h0i1j2k3l4m5",
+    "input": "What's the expiration date of my coupon?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e1f2a3b4-c5d6-e7f8-g9h0-i1j2k3l4m5n6",
+    "input": "Any special offers available today?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f2a3b4c5-d6e7-f8g9-h0i1-j2k3l4m5n6o7",
+    "input": "How much is the discount?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a3b4c5d6-e7f8-g9h0-i1j2-k3l4m5n6o7p8",
+    "input": "Can I combine coupons?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b4c5d6e7-f8g9-h0i1-j2k3-l4m5n6o7p8q9",
+    "input": "Do you have any student discounts?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c5d6e7f8-g9h0-i1j2-k3l4-m5n6o7p8q9r0",
+    "input": "Are there any coupons for first-time users?",
+    "intent": "coupon"
+  },
+  {
+    "id": "d6e7f8g9-h0i1-j2k3-l4m5-n6o7p8q9r0s1",
+    "input": "I can't find where to enter my promo code.",
+    "intent": "coupon"
+  },
+  {
+    "id": "e7f8g9h0-i1j2-k3l4-m5n6-o7p8q9r0s1t2",
+    "input": "My coupon code is not working.",
+    "intent": "coupon"
+  },
+  {
+    "id": "f8g9h0i1-j2k3-l4m5-n6o7-p8q9r0s1t2u3",
+    "input": "What's the best deal you have right now?",
+    "intent": "coupon"
+  },
+  {
+    "id": "a9h0i1j2-k3l4-m5n6-o7p8-q9r0s1t2u3v4",
+    "input": "How do I get a discount?",
+    "intent": "coupon"
+  },
+  {
+    "id": "b0i1j2k3-l4m5-n6o7-p8q9-r0s1t2u3v4w5",
+    "input": "Can you apply the discount for me?",
+    "intent": "coupon"
+  },
+  {
+    "id": "c1j2k3l4-m5n6-o7p8-q9r0-s1t2u3v4w5x6",
+    "input": "I was promised a discount.",
+    "intent": "coupon"
+  },
+  {
+    "id": "d2k3l4m5-n6o7-p8q9-r0s1-t2u3v4w5x6y7",
+    "input": "Is this item on sale?",
+    "intent": "coupon"
+  },
+  {
+    "id": "e3l4m5n6-o7p8-q9r0-s1t2-u3v4w5x6y7z8",
+    "input": "How can I save money on my order?",
+    "intent": "coupon"
+  },
+  {
+    "id": "f4m5n6o7-p8q9-r0s1-t2u3-v4w5x6y7z8a9",
+    "input": "Do you have any promotional codes?",
+    "intent": "coupon"
+  }
+]
