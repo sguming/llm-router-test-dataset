@@ -1,0 +1,33 @@
+{
+  "name": "llm-router-test-dataset",
+  "version": "1.0.0",
+  "description": "intent classification dataset for testing the robustness of LLM-based intent routing systems",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bianbianzhu/llm-router-test-dataset.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bianbianzhu/llm-router-test-dataset/issues"
+  },
+  "homepage": "https://github.com/bianbianzhu/llm-router-test-dataset#readme",
+  "dependencies": {
+    "langsmith": "^0.3.69",
+    "openevals": "^0.1.1",
+    "zod": "^4.1.9"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.10",
+    "@types/node": "^24.5.2",
+    "dotenv": "^17.2.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
