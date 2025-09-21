@@ -2,6 +2,12 @@ import { ExampleCreate } from "langsmith/schemas";
 import { readFile, readdir } from "fs/promises";
 import { z } from "zod";
 
+type FormatTestDataParams = {
+  dataset_id: string;
+  type: "test" | "loose";
+  testDataFileName?: string;
+};
+
 const testDataSchema = z.object({
   id: z.string().describe("The unique identifier for the example."),
   input: z.string().describe("The user query."),
@@ -11,9 +17,10 @@ const testDataSchema = z.object({
 const TEST_DATA_DIR = "test_data";
 
 export async function formatTestData(
-  dataset_id: string,
-  type: "test" | "loose"
+  args: FormatTestDataParams
 ): Promise<ExampleCreate[]> {
+  const { dataset_id, type, testDataFileName } = args;
+
   try {
     const testDataFiles = await readdir(TEST_DATA_DIR, { withFileTypes: true });
     const fileNames = testDataFiles.map((file) => file.name);
@@ -46,6 +53,7 @@ export async function formatTestData(
       outputs: { intent: data.intent },
       dataset_id,
       metadata: {
+        // for filtering
         intent: data.intent,
       },
     }));
