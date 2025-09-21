@@ -1,21 +1,21 @@
-import { Client, Dataset } from "langsmith";
+import "dotenv/config";
+import type { Client, Dataset } from "langsmith";
 import { ExampleCreate } from "langsmith/schemas";
 import { formatTestData } from "./data_formatter.js";
 
 type CreateDatasetParams = {
   client: Client;
   datasetName: string;
+  testDataFileName?: string;
   config?: {
     type?: "test" | "loose";
   };
 };
 
-const langsmith = new Client();
-
 export async function createDataset(
   args: CreateDatasetParams
 ): Promise<Dataset> {
-  const { client, datasetName, config } = args;
+  const { client, datasetName, config, testDataFileName } = args;
 
   try {
     const isDatasetExists = await client.hasDataset({ datasetName });
@@ -23,10 +23,11 @@ export async function createDataset(
       ? await client.readDataset({ datasetName })
       : await client.createDataset(datasetName);
 
-    const examples: ExampleCreate[] = await formatTestData(
-      dataset.id,
-      config?.type ?? "test"
-    );
+    const examples: ExampleCreate[] = await formatTestData({
+      dataset_id: dataset.id,
+      type: config?.type ?? "test",
+      testDataFileName,
+    });
 
     await client.createExamples(examples);
 
@@ -36,12 +37,3 @@ export async function createDataset(
     throw error;
   }
 }
-
-// const dataset = await createDataset({
-//   client: langsmith,
-//   datasetName: "intent_classification_dataset_loose",
-//   config: {
-//     type: "loose",
-//   },
-// });
-// console.log(dataset);
