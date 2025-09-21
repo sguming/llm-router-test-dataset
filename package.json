@@ -5,7 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest --coverage",
+    "create:dataset": "tsx evaluation/scripts/command.ts"
   },
   "repository": {
     "type": "git",
@@ -28,6 +32,8 @@
     "@types/node": "^24.5.2",
     "dotenv": "^17.2.2",
     "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "^1.6.0",
+    "@vitest/coverage-v8": "^1.6.0"
   }
 }
