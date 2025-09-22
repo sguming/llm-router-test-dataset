@@ -1,0 +1,373 @@
+
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+    "input": "What events are happening near me this Friday?",
+    "intent": "event"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-2345-67890abcdef0",
+    "input": "I need to find information on the upcoming art exhibition.",
+    "intent": "event"
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-3456-7890abcdef01",
+    "input": "Can you recommend a family-friendly event for this Saturday?",
+    "intent": "event"
+  },
+  {
+    "id": "d4e5f6a7-b8c9-0123-4567-890abcdef012",
+    "input": "How do I register for the marathon next month?",
+    "intent": "event"
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1234-5678-90abcdef0123",
+    "input": "I want to cancel my ticket for the concert.",
+    "intent": "event"
+  },
+  {
+    "id": "f6a7b8c9-d0e1-2345-6789-0abcdef01234",
+    "input": "What is the schedule for the film festival?",
+    "intent": "event"
+  },
+  {
+    "id": "a7b8c9d0-e1f2-3456-7890-abcdef012345",
+    "input": "Where is the food festival being held?",
+    "intent": "event"
+  },
+  {
+    "id": "b8c9d0e1-f2a3-4567-8901-bcdef0123456",
+    "input": "Who are the speakers at the business conference?",
+    "intent": "event"
+  },
+  {
+    "id": "c9d0e1f2-a3b4-5678-9012-cdef01234567",
+    "input": "Is there a dress code for the gala?",
+    "intent": "event"
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6789-0123-def012345678",
+    "input": "Can I bring my children to the community picnic?",
+    "intent": "event"
+  },
+  {
+    "id": "e1f2a3b4-c5d6-7890-1234-ef0123456789",
+    "input": "I lost my ticket for the play, can I get a new one?",
+    "intent": "event"
+  },
+  {
+    "id": "f2a3b4c5-d6e7-8901-2345-f01234567890",
+    "input": "What time does the museum event start?",
+    "intent": "event"
+  },
+  {
+    "id": "a3b4c5d6-e7f8-9012-3456-01234567890a",
+    "input": "Are there any discounts for students for the workshop?",
+    "intent": "event"
+  },
+  {
+    "id": "b4c5d6e7-f8a9-0123-4567-1234567890ab",
+    "input": "I want to know more about the charity run.",
+    "intent": "event"
+  },
+  {
+    "id": "c5d6e7f8-a9b0-1234-5678-234567890abc",
+    "input": "How can I volunteer for the music festival?",
+    "intent": "event"
+  },
+  {
+    "id": "d6e7f8a9-b0c1-2345-6789-34567890abcd",
+    "input": "Is the outdoor movie screening still happening if it rains?",
+    "intent": "event"
+  },
+  {
+    "id": "e7f8a9b0-c1d2-3456-7890-4567890abcde",
+    "input": "What are the rules for the photography competition?",
+    "intent": "event"
+  },
+  {
+    "id": "f8a9b0c1-d2e3-4567-8901-567890abcdef",
+    "input": "I would like to book a table for the New Year's Eve event.",
+    "intent": "event"
+  },
+  {
+    "id": "8a9b0c1d-2e3f-4567-8901-67890abcdef0",
+    "input": "Can you check my registration status for the coding workshop?",
+    "intent": "event"
+  },
+  {
+    "id": "a9b0c1d2-e3f4-5678-9012-7890abcdef01",
+    "input": "Tell me about the performers at the jazz night.",
+    "intent": "event"
+  },
+  {
+    "id": "9b0c1d2e-3f4a-5678-9012-890abcdef012",
+    "input": "What is the policy on refunds for event tickets?",
+    "intent": "event"
+  },
+  {
+    "id": "b0c1d2e3-f4a5-6789-0123-90abcdef0123",
+    "input": "I want to find a local book club meeting.",
+    "intent": "event"
+  },
+  {
+    "id": "0c1d2e3f-4a5b-6789-0123-abcdef012345",
+    "input": "Are there any free events this month?",
+    "intent": "event"
+  },
+  {
+    "id": "c1d2e3f4-a5b6-7890-1234-bcdef0123456",
+    "input": "How do I get to the convention center?",
+    "intent": "event"
+  },
+  {
+    "id": "1d2e3f4a-5b6c-7890-1234-cdef01234567",
+    "input": "I want to know the dates for the next holiday market.",
+    "intent": "event"
+  },
+  {
+    "id": "2e3f4a5b-6c7d-8901-2345-def012345678",
+    "input": "Find me a concert for this weekend.",
+    "intent": "event"
+  },
+  {
+    "id": "3f4a5b6c-7d8e-9012-3456-ef0123456789",
+    "input": "I want to go to a comedy show, any recommendations?",
+    "intent": "event"
+  },
+  {
+    "id": "4a5b6c7d-8e9f-0123-4567-f01234567890",
+    "input": "Are there any street fairs happening in the city?",
+    "intent": "event"
+  },
+  {
+    "id": "5b6c7d8e-9f0a-1234-5678-01234567890a",
+    "input": "I need to buy tickets for the ballet.",
+    "intent": "event"
+  },
+  {
+    "id": "6c7d8e9f-0a1b-2345-6789-1234567890ab",
+    "input": "What's the price for the front row seats at the opera?",
+    "intent": "event"
+  },
+  {
+    "id": "7d8e9f0a-1b2c-3456-7890-234567890abc",
+    "input": "Is the author talk event free?",
+    "intent": "event"
+  },
+  {
+    "id": "8e9f0a1b-2c3d-4567-8901-34567890abcd",
+    "input": "I want to join the online webinar.",
+    "intent": "event"
+  },
+  {
+    "id": "9f0a1b2c-3d4e-5678-9012-4567890abcde",
+    "input": "How long is the intermission for the musical?",
+    "intent": "event"
+  },
+  {
+    "id": "0a1b2c3d-4e5f-6789-0123-567890abcdef",
+    "input": "Can I get a refund for the postponed game?",
+    "intent": "event"
+  },
+  {
+    "id": "1b2c3d4e-5f6a-7890-1234-67890abcdef0",
+    "input": "What should I wear to the wine tasting event?",
+    "intent": "event"
+  },
+  {
+    "id": "2c3d4e5f-6a7b-8901-2345-7890abcdef01",
+    "input": "Is parking available at the venue?",
+    "intent": "event"
+  },
+  {
+    "id": "3d4e5f6a-7b8c-9012-3456-890abcdef012",
+    "input": "I want to know the lineup for the music festival.",
+    "intent": "event"
+  },
+  {
+    "id": "4e5f6a7b-8c9d-0123-4567-90abcdef0123",
+    "input": "Are pets allowed at the park event?",
+    "intent": "event"
+  },
+  {
+    "id": "5f6a7b8c-9d0e-1234-5678-0abcdef01234",
+    "input": "I need to change my registration details for the workshop.",
+    "intent": "event"
+  },
+  {
+    "id": "6a7b8c9d-0e1f-2345-6789-abcdef012345",
+    "input": "What time do the doors open for the concert?",
+    "intent": "event"
+  },
+  {
+    "id": "7b8c9d0e-1f2a-3456-7890-bcdef0123456",
+    "input": "Can I exchange my ticket for a different date?",
+    "intent": "event"
+  },
+  {
+    "id": "8c9d0e1f-2a3b-4567-8901-cdef01234567",
+    "input": "Is there a waiting list for the sold-out event?",
+    "intent": "event"
+  },
+  {
+    "id": "9d0e1f2a-3b4c-5678-9012-def012345678",
+    "input": "I want to know the set times for the DJs at the festival.",
+    "intent": "event"
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6789-0123-ef0123456789",
+    "input": "Are there any age restrictions for the concert?",
+    "intent": "event"
+  },
+  {
+    "id": "e1f2a3b4-c5d6-7890-1234-f01234567890",
+    "input": "I want to find a list of all the vendors at the craft fair.",
+    "intent": "event"
+  },
+  {
+    "id": "f2a3b4c5-d6e7-8901-2345-01234567890a",
+    "input": "Can you tell me the location of the nearest box office?",
+    "intent": "event"
+  },
+  {
+    "id": "a3b4c5d6-e7f8-9012-3456-1234567890ab",
+    "input": "I want to see the seating chart for the theater.",
+    "intent": "event"
+  },
+  {
+    "id": "b4c5d6e7-f8a9-0123-4567-234567890abc",
+    "input": "What are the dates for the annual flower show?",
+    "intent": "event"
+  },
+  {
+    "id": "c5d6e7f8-a9b0-1234-5678-34567890abcd",
+    "input": "I need to know if the event is accessible for wheelchairs.",
+    "intent": "event"
+  },
+  {
+    "id": "d6e7f8a9-b0c1-2345-6789-4567890abcde",
+    "input": "Can I get a group discount for the museum tour?",
+    "intent": "event"
+  },
+  {
+    "id": "e7f8a9b0-c1d2-3456-7890-567890abcdef",
+    "input": "I want to know if there will be a Q&A session after the talk.",
+    "intent": "event"
+  },
+  {
+    "id": "f8a9b0c1-d2e3-4567-8901-67890abcdef0",
+    "input": "What is the theme of this year's costume party?",
+    "intent": "event"
+  },
+  {
+    "id": "8a9b0c1d-2e3f-4567-8901-7890abcdef01",
+    "input": "I want to find out more about the opening ceremony.",
+    "intent": "event"
+  },
+  {
+    "id": "a9b0c1d2-e3f4-5678-9012-890abcdef012",
+    "input": "Are we allowed to take photos at the exhibition?",
+    "intent": "event"
+  },
+  {
+    "id": "9b0c1d2e-3f4a-5678-9012-90abcdef0123",
+    "input": "I want to know the schedule for the workshops.",
+    "intent": "event"
+  },
+  {
+    "id": "b0c1d2e3-f4a5-6789-0123-abcdef012345",
+    "input": "Can I buy tickets at the door?",
+    "intent": "event"
+  },
+  {
+    "id": "0c1d2e3f-4a5b-6789-0123-bcdef0123456",
+    "input": "I want to know if the event will be live-streamed.",
+    "intent": "event"
+  },
+  {
+    "id": "c1d2e3f4-a5b6-7890-1234-cdef01234567",
+    "input": "What food and drinks will be available at the festival?",
+    "intent": "event"
+  },
+  {
+    "id": "1d2e3f4a-5b6c-7890-1234-def012345678",
+    "input": "I want to know the name of the opening act for the concert.",
+    "intent": "event"
+  },
+  {
+    "id": "2e3f4a5b-6c7d-8901-2345-ef0123456789",
+    "input": "Is there a map of the festival grounds?",
+    "intent": "event"
+  },
+  {
+    "id": "3f4a5b6c-7d8e-9012-3456-f01234567890",
+    "input": "I want to know if there are any volunteer opportunities for the event.",
+    "intent": "event"
+  },
+  {
+    "id": "4a5b6c7d-8e9f-0123-4567-01234567890a",
+    "input": "Can you tell me the dates for the next comic con?",
+    "intent": "event"
+  },
+  {
+    "id": "5b6c7d8e-9f0a-1234-5678-1234567890ab",
+    "input": "I want to know the price of a season pass for the theater.",
+    "intent": "event"
+  },
+  {
+    "id": "6c7d8e9f-0a1b-2345-6789-234567890abc",
+    "input": "Are there any early bird tickets for the conference?",
+    "intent": "event"
+  },
+  {
+    "id": "7d8e9f0a-1b2c-3456-7890-34567890abcd",
+    "input": "I want to know the full schedule for the Olympic games.",
+    "intent": "event"
+  },
+  {
+    "id": "8e9f0a1b-2c3d-4567-8901-4567890abcde",
+    "input": "Can I bring my own food and drinks to the outdoor concert?",
+    "intent": "event"
+  },
+  {
+    "id": "9f0a1b2c-3d4e-5678-9012-567890abcdef",
+    "input": "I want to know if the meet and greet is included in the ticket price.",
+    "intent": "event"
+  },
+  {
+    "id": "0a1b2c3d-4e5f-6789-0123-67890abcdef0",
+    "input": "What is the last day to register for the workshop?",
+    "intent": "event"
+  },
+  {
+    "id": "1b2c3d4e-5f6a-7890-1234-7890abcdef01",
+    "input": "I want to know if there will be merchandise for sale at the event.",
+    "intent": "event"
+  },
+  {
+    "id": "2c3d4e5f-6a7b-8901-2345-890abcdef012",
+    "input": "Can you tell me who won the competition last year?",
+    "intent": "event"
+  },
+  {
+    "id": "3d4e5f6a-7b8c-9012-3456-90abcdef0123",
+    "input": "I want to know the history of the festival.",
+    "intent": "event"
+  },
+  {
+    "id": "4e5f6a7b-8c9d-0123-4567-abcdef012345",
+    "input": "Is there a lost and found at the event?",
+    "intent": "event"
+  },
+  {
+    "id": "5f6a7b8c-9d0e-1234-5678-bcdef0123456",
+    "input": "I want to know if there are any age-specific events.",
+    "intent": "event"
+  },
+  {
+    "id": "6a7b8c9d-0e1f-2345-6789-cdef01234567",
+    "input": "Can I get a pass for the entire festival?",
+    "intent": "event"
+  }
+]

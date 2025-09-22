@@ -8,6 +8,7 @@ export const intentClassificationOutputSchema = z.object({
       "wine_recommendation",
       "membership",
       "delivery status",
+      "event",
     ])
     .describe("The intent of the user query"),
   confidence: z

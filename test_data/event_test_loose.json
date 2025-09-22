@@ -1,0 +1,373 @@
+
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+    "input": "What's happening this weekend?",
+    "intent": "event"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-2345-67890abcdef0",
+    "input": "Any cool stuff going on in town?",
+    "intent": "event"
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-3456-7890abcdef01",
+    "input": "I'm bored, suggest something to do.",
+    "intent": "event"
+  },
+  {
+    "id": "d4e5f6a7-b8c9-0123-4567-890abcdef012",
+    "input": "Is there a get-together planned anytime soon?",
+    "intent": "event"
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1234-5678-90abcdef0123",
+    "input": "I heard there's a gathering, can you tell me more?",
+    "intent": "event"
+  },
+  {
+    "id": "f6a7b8c9-d0e1-2345-6789-0abcdef01234",
+    "input": "How do I get into that thing everyone is talking about?",
+    "intent": "event"
+  },
+  {
+    "id": "a7b8c9d0-e1f2-3456-7890-abcdef012345",
+    "input": "I need to sign up for the upcoming workshop.",
+    "intent": "event"
+  },
+  {
+    "id": "b8c9d0e1-f2a3-4567-8901-bcdef0123456",
+    "input": "Can I still get a spot for the seminar?",
+    "intent": "event"
+  },
+  {
+    "id": "c9d0e1f2-a3b4-5678-9012-cdef01234567",
+    "input": "I can't go to the party anymore.",
+    "intent": "event"
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6789-0123-def012345678",
+    "input": "What's the plan for the holidays?",
+    "intent": "event"
+  },
+  {
+    "id": "e1f2a3b4-c5d6-7890-1234-ef0123456789",
+    "input": "Tell me about the big sale event.",
+    "intent": "event"
+  },
+  {
+    "id": "f2a3b4c5-d6e7-8901-2345-f01234567890",
+    "input": "Is there a local market this week?",
+    "intent": "event"
+  },
+  {
+    "id": "a3b4c5d6-e7f8-9012-3456-01234567890a",
+    "input": "I'm looking for something to do with my kids.",
+    "intent": "event"
+  },
+  {
+    "id": "b4c5d6e7-f8a9-0123-4567-1234567890ab",
+    "input": "What's the occasion for the celebration?",
+    "intent": "event"
+  },
+  {
+    "id": "c5d6e7f8-a9b0-1234-5678-234567890abc",
+    "input": "I need to know who is performing at the show.",
+    "intent": "event"
+  },
+  {
+    "id": "d6e7f8a9-b0c1-2345-6789-34567890abcd",
+    "input": "What are the rules for the competition?",
+    "intent": "event"
+  },
+  {
+    "id": "e7f8a9b0-c1d2-3456-7890-4567890abcde",
+    "input": "I want to go to the opening of the new store.",
+    "intent": "event"
+  },
+  {
+    "id": "f8a9b0c1-d2e3-4567-8901-567890abcdef",
+    "input": "Is there a happy hour anywhere?",
+    "intent": "event"
+  },
+  {
+    "id": "8a9b0c1d-2e3f-4567-8901-67890abcdef0",
+    "input": "I'm looking for a place to watch the game.",
+    "intent": "event"
+  },
+  {
+    "id": "a9b0c1d2-e3f4-5678-9012-7890abcdef01",
+    "input": "What's the deal with the street closure?",
+    "intent": "event"
+  },
+  {
+    "id": "9b0c1d2e-3f4a-5678-9012-890abcdef012",
+    "input": "I want to join the yoga class in the park.",
+    "intent": "event"
+  },
+  {
+    "id": "b0c1d2e3-f4a5-6789-0123-90abcdef0123",
+    "input": "Is there a book signing happening soon?",
+    "intent": "event"
+  },
+  {
+    "id": "0c1d2e3f-4a5b-6789-0123-abcdef012345",
+    "input": "I'm interested in the art class.",
+    "intent": "event"
+  },
+  {
+    "id": "c1d2e3f4-a5b6-7890-1234-bcdef0123456",
+    "input": "What's the story with the parade?",
+    "intent": "event"
+  },
+  {
+    "id": "1d2e3f4a-5b6c-7890-1234-cdef01234567",
+    "input": "I want to be part of the flash mob.",
+    "intent": "event"
+  },
+  {
+    "id": "2e3f4a5b-6c7d-8901-2345-def012345678",
+    "input": "Tell me about the open mic night.",
+    "intent": "event"
+  },
+  {
+    "id": "3f4a5b6c-7d8e-9012-3456-ef0123456789",
+    "input": "I'm looking for a good time.",
+    "intent": "event"
+  },
+  {
+    "id": "4a5b6c7d-8e9f-0123-4567-f01234567890",
+    "input": "Where's the party at?",
+    "intent": "event"
+  },
+  {
+    "id": "5b6c7d8e-9f0a-1234-5678-01234567890a",
+    "input": "I need to get on the list for that club.",
+    "intent": "event"
+  },
+  {
+    "id": "6c7d8e9f-0a1b-2345-6789-1234567890ab",
+    "input": "Is there a cover charge for the bar tonight?",
+    "intent": "event"
+  },
+  {
+    "id": "7d8e9f0a-1b2c-3456-7890-234567890abc",
+    "input": "I want to go to the after-party.",
+    "intent": "event"
+  },
+  {
+    "id": "8e9f0a1b-2c3d-4567-8901-34567890abcd",
+    "input": "What's the dress code for the lounge?",
+    "intent": "event"
+  },
+  {
+    "id": "9f0a1b2c-3d4e-5678-9012-4567890abcde",
+    "input": "I'm looking for a place to dance.",
+    "intent": "event"
+  },
+  {
+    "id": "0a1b2c3d-4e5f-6789-0123-567890abcdef",
+    "input": "Is there a live band playing anywhere?",
+    "intent": "event"
+  },
+  {
+    "id": "1b2c3d4e-5f6a-7890-1234-67890abcdef0",
+    "input": "I want to find a karaoke bar.",
+    "intent": "event"
+  },
+  {
+    "id": "2c3d4e5f-6a7b-8901-2345-7890abcdef01",
+    "input": "What's the special at the pub tonight?",
+    "intent": "event"
+  },
+  {
+    "id": "3d4e5f6a-7b8c-9012-3456-890abcdef012",
+    "input": "I'm looking for a trivia night.",
+    "intent": "event"
+  },
+  {
+    "id": "4e5f6a7b-8c9d-0123-4567-90abcdef0123",
+    "input": "I want to go to a wine tasting.",
+    "intent": "event"
+  },
+  {
+    "id": "5f6a7b8c-9d0e-1234-5678-0abcdef01234",
+    "input": "Is there a farmers market nearby?",
+    "intent": "event"
+  },
+  {
+    "id": "6a7b8c9d-0e1f-2345-6789-abcdef012345",
+    "input": "I'm looking for a cooking class.",
+    "intent": "event"
+  },
+  {
+    "id": "7b8c9d0e-1f2a-3456-7890-bcdef0123456",
+    "input": "I want to join a pottery workshop.",
+    "intent": "event"
+  },
+  {
+    "id": "8c9d0e1f-2a3b-4567-8901-cdef01234567",
+    "input": "Is there a local theater group I can join?",
+    "intent": "event"
+  },
+  {
+    "id": "9d0e1f2a-3b4c-5678-9012-def012345678",
+    "input": "I'm looking for a running club.",
+    "intent": "event"
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6789-0123-ef0123456789",
+    "input": "I want to find a hiking group.",
+    "intent": "event"
+  },
+  {
+    "id": "e1f2a3b4-c5d6-7890-1234-f01234567890",
+    "input": "Is there a board game cafe in the area?",
+    "intent": "event"
+  },
+  {
+    "id": "f2a3b4c5-d6e7-8901-2345-01234567890a",
+    "input": "I'm looking for a place to play chess.",
+    "intent": "event"
+  },
+  {
+    "id": "a3b4c5d6-e7f8-9012-3456-1234567890ab",
+    "input": "I want to find a public swimming pool.",
+    "intent": "event"
+  },
+  {
+    "id": "b4c5d6e7-f8a9-0123-4567-234567890abc",
+    "input": "Is there a place to go ice skating?",
+    "intent": "event"
+  },
+  {
+    "id": "c5d6e7f8-a9b0-1234-5678-34567890abcd",
+    "input": "I'm looking for a place to go bowling.",
+    "intent": "event"
+  },
+  {
+    "id": "d6e7f8a9-b0c1-2345-6789-4567890abcde",
+    "input": "I want to find a place to play mini golf.",
+    "intent": "event"
+  },
+  {
+    "id": "e7f8a9b0-c1d2-3456-7890-567890abcdef",
+    "input": "Is there an arcade nearby?",
+    "intent": "event"
+  },
+  {
+    "id": "f8a9b0c1-d2e3-4567-8901-67890abcdef0",
+    "input": "I'm looking for a place to go go-karting.",
+    "intent": "event"
+  },
+  {
+    "id": "8a9b0c1d-2e3f-4567-8901-7890abcdef01",
+    "input": "I want to find a laser tag arena.",
+    "intent": "event"
+  },
+  {
+    "id": "a9b0c1d2-e3f4-5678-9012-890abcdef012",
+    "input": "Is there a trampoline park in the city?",
+    "intent": "event"
+  },
+  {
+    "id": "9b0c1d2e-3f4a-5678-9012-90abcdef0123",
+    "input": "I'm looking for a place to go rock climbing.",
+    "intent": "event"
+  },
+  {
+    "id": "b0c1d2e3-f4a5-6789-0123-abcdef012345",
+    "input": "I want to find a place to go kayaking.",
+    "intent": "event"
+  },
+  {
+    "id": "0c1d2e3f-4a5b-6789-0123-bcdef0123456",
+    "input": "Is there a place to go zip-lining?",
+    "intent": "event"
+  },
+  {
+    "id": "c1d2e3f4-a5b6-7890-1234-cdef01234567",
+    "input": "I'm looking for a place to go paintballing.",
+    "intent": "event"
+  },
+  {
+    "id": "1d2e3f4a-5b6c-7890-1234-def012345678",
+    "input": "I want to find a place to go horseback riding.",
+    "intent": "event"
+  },
+  {
+    "id": "2e3f4a5b-6c7d-8901-2345-ef0123456789",
+    "input": "Is there a place to go fishing?",
+    "intent": "event"
+  },
+  {
+    "id": "3f4a5b6c-7d8e-9012-3456-f01234567890",
+    "input": "I'm looking for a place to go camping.",
+    "intent": "event"
+  },
+  {
+    "id": "4a5b6c7d-8e9f-0123-4567-01234567890a",
+    "input": "I want to find a place to have a picnic.",
+    "intent": "event"
+  },
+  {
+    "id": "5b6c7d8e-9f0a-1234-5678-1234567890ab",
+    "input": "Is there a place to have a barbecue?",
+    "intent": "event"
+  },
+  {
+    "id": "6c7d8e9f-0a1b-2345-6789-234567890abc",
+    "input": "I'm looking for a place to have a bonfire.",
+    "intent": "event"
+  },
+  {
+    "id": "7d8e9f0a-1b2c-3456-7890-34567890abcd",
+    "input": "I want to find a place to watch the sunset.",
+    "intent": "event"
+  },
+  {
+    "id": "8e9f0a1b-2c3d-4567-8901-4567890abcde",
+    "input": "Is there a place to watch the sunrise?",
+    "intent": "event"
+  },
+  {
+    "id": "9f0a1b2c-3d4e-5678-9012-567890abcdef",
+    "input": "I'm looking for a place to stargaze.",
+    "intent": "event"
+  },
+  {
+    "id": "0a1b2c3d-4e5f-6789-0123-67890abcdef0",
+    "input": "I want to find a place to see the city lights.",
+    "intent": "event"
+  },
+  {
+    "id": "1b2c3d4e-5f6a-7890-1234-7890abcdef01",
+    "input": "Is there a scenic viewpoint nearby?",
+    "intent": "event"
+  },
+  {
+    "id": "2c3d4e5f-6a7b-8901-2345-890abcdef012",
+    "input": "I'm looking for a romantic spot.",
+    "intent": "event"
+  },
+  {
+    "id": "3d4e5f6a-7b8c-9012-3456-90abcdef0123",
+    "input": "I want to find a place to propose.",
+    "intent": "event"
+  },
+  {
+    "id": "4e5f6a7b-8c9d-0123-4567-abcdef012345",
+    "input": "Is there a place to have a wedding?",
+    "intent": "event"
+  },
+  {
+    "id": "5f6a7b8c-9d0e-1234-5678-bcdef0123456",
+    "input": "I'm looking for a place to have a birthday party.",
+    "intent": "event"
+  },
+  {
+    "id": "6a7b8c9d-0e1f-2345-6789-cdef01234567",
+    "input": "I want to find a place to have a baby shower.",
+    "intent": "event"
+  }
+]

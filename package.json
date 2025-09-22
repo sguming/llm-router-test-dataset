@@ -9,7 +9,8 @@
     "test:run": "vitest run",
     "test:watch": "vitest watch",
     "test:coverage": "vitest --coverage",
-    "create:dataset": "tsx evaluation/scripts/command.ts"
+    "create:dataset": "tsx evaluation/scripts/command.ts",
+    "show:prompt": "tsx prompts/show-prompt.ts"
   },
   "repository": {
     "type": "git",
