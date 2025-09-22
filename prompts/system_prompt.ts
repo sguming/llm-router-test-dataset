@@ -13,6 +13,7 @@
 
 import { readdir, readFile } from "fs/promises";
 import { encoding_for_model } from "tiktoken";
+import { FILE_PATHS } from "../src/constants/index.js";
 
 const safetyGuidelines = `# Safety Rules
 
@@ -49,8 +50,6 @@ Assign a **single integer confidence score** between 0 and 100 to indicate certa
 
 const RepeatedInstructions = `**Remember: Always choose the most applicable category based on the primary action or information being requested by the user. Use this information to accurately identify the user's goal and output the intent along with your confidence score in the OUTPUT format below.**`;
 
-const INTENTS_DIR = "intents";
-const LOOSE_INTENTS_IDENTIFIER = "_loose.md";
 const CHAT_HISTORY_PLACEHOLDER = "{chat_history}";
 const MOST_RECENT_INTENT_PLACEHOLDER = "{most_recent_intent}";
 
@@ -73,16 +72,21 @@ export async function constructSystemPrompt(): Promise<string> {
 
 async function loadIntentListMarkdown(): Promise<string> {
   try {
-    const intentFiles = await readdir(INTENTS_DIR);
+    const intentFiles = await readdir(FILE_PATHS.INTENTS_DIR);
 
     const selectedFiles = intentFiles.filter(
-      (file) => file.endsWith(".md") && !file.endsWith(LOOSE_INTENTS_IDENTIFIER)
+      (file) =>
+        file.endsWith(".md") &&
+        !file.endsWith(FILE_PATHS.LOOSE_INTENTS_IDENTIFIER)
     );
 
     let intentListMarkdown = "";
 
     for (const file of selectedFiles) {
-      const content = await readFile(`${INTENTS_DIR}/${file}`, "utf-8");
+      const content = await readFile(
+        `${FILE_PATHS.INTENTS_DIR}/${file}`,
+        "utf-8"
+      );
       intentListMarkdown += `${content}\n`;
     }
 
