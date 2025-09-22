@@ -51,6 +51,8 @@ const RepeatedInstructions = `**Remember: Always choose the most applicable cate
 
 const INTENTS_DIR = "intents";
 const LOOSE_INTENTS_IDENTIFIER = "_loose.md";
+const CHAT_HISTORY_PLACEHOLDER = "{chat_history}";
+const MOST_RECENT_INTENT_PLACEHOLDER = "{most_recent_intent}";
 
 export async function constructSystemPrompt(): Promise<string> {
   const intentListMarkdown = await loadIntentListMarkdown();
@@ -63,7 +65,10 @@ export async function constructSystemPrompt(): Promise<string> {
     console.warn(`🚨 KV Cache is not hit. Token size: ${tokenSize}`);
   }
 
-  return `${safetyGuidelines}\n${role}\n${task}\n${outputFormat}\n${intentListMarkdown}\n${"{chat_history}"}\n${"{most_recent_intent}"}\n${RepeatedInstructions}`;
+  const chatHistory = `Chat history: ${CHAT_HISTORY_PLACEHOLDER}`;
+  const mostRecentIntent = `Most recent intent: ${MOST_RECENT_INTENT_PLACEHOLDER}`;
+
+  return `${safetyGuidelines}\n${role}\n${task}\n${outputFormat}\n${intentListMarkdown}\n${chatHistory}\n${mostRecentIntent}\n${RepeatedInstructions}`;
 }
 
 async function loadIntentListMarkdown(): Promise<string> {
