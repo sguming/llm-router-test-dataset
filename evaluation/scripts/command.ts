@@ -1,14 +1,12 @@
 import { parseArgs as parseNodeArgs } from "node:util";
-import { Client } from "langsmith";
 import { createDataset } from "./create_dataset.js";
+import { langsmith } from "../client.js";
 
 interface CLIOptions {
   datasetName: string;
   fileName?: string;
   type: "test" | "loose";
 }
-
-const langsmith = new Client();
 
 const HELP_MESSAGE = `
 📖 Usage:    create-dataset <datasetName> [--fileName <fileName>] [--type <type>]
