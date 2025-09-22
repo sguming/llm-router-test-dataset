@@ -4,7 +4,7 @@ import { intentClassifierEvaluation } from "./eval.js";
 import { FILE_PATHS } from "../../src/constants/index.js";
 import { z } from "zod";
 
-export async function generateFailedResultsReport(): Promise<string> {
+export async function generateFailedResultsReport() {
   const { results } = await intentClassifierEvaluation({
     datasetName: "intent_classification_experiment",
   });
@@ -60,7 +60,10 @@ The following runs failed the intent classification evaluation. The expected out
 ${cleanedResults.map((result) => result.description).join("\n\n")}`;
   }
 
-  return report;
+  return {
+    report,
+    cleanedResults,
+  };
 }
 
 async function loadIntentDefinition(
