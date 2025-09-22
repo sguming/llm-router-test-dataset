@@ -63,7 +63,7 @@ export async function constructSystemPrompt(): Promise<string> {
     console.warn(`🚨 KV Cache is not hit. Token size: ${tokenSize}`);
   }
 
-  return `${safetyGuidelines}\n${role}\n${task}\n${outputFormat}\n${intentListMarkdown}\n${RepeatedInstructions}`;
+  return `${safetyGuidelines}\n${role}\n${task}\n${outputFormat}\n${intentListMarkdown}\n${"{chat_history}"}\n${"{most_recent_intent}"}\n${RepeatedInstructions}`;
 }
 
 async function loadIntentListMarkdown(): Promise<string> {
