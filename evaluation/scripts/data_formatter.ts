@@ -6,6 +6,7 @@ type FormatTestDataParams = {
   dataset_id: string;
   type: "test" | "loose";
   fileName?: string;
+  limit?: number; // per-file limit, upload only the first N examples of each file when provided
 };
 
 const testDataSchema = z.object({
@@ -19,7 +20,7 @@ const TEST_DATA_DIR = "test_data";
 export async function formatTestData(
   args: FormatTestDataParams
 ): Promise<ExampleCreate[]> {
-  const { dataset_id, type, fileName } = args;
+  const { dataset_id, type, fileName, limit } = args;
 
   try {
     const testDataFiles = await readdir(TEST_DATA_DIR, { withFileTypes: true });
@@ -65,8 +66,12 @@ export async function formatTestData(
         );
       }
 
-      console.log(`✅ Found ${data.length} examples in ${fileName}`);
-      testData.push(...data);
+      const useLimit = Number.isFinite(limit) && (limit as number) > 0 ? (limit as number) : undefined;
+      const sliced = useLimit ? data.slice(0, useLimit) : data;
+      console.log(
+        `✅ Found ${data.length} examples in ${fileName}${sliced.length !== data.length ? ` → taking first ${sliced.length}` : ""}`
+      );
+      testData.push(...sliced);
     }
 
     // 2. validate the test data

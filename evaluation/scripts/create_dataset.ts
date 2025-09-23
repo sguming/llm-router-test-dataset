@@ -9,6 +9,7 @@ type CreateDatasetParams = {
   fileName?: string;
   config?: {
     type?: "test" | "loose";
+    limit?: number; // per-file limit passed down to formatter
   };
 };
 
@@ -36,6 +37,7 @@ export async function createDataset(
       dataset_id: dataset.id,
       type: config?.type ?? "test",
       fileName,
+      limit: config?.limit,
     });
 
     console.log(`📝 Uploading ${examples.length} examples to dataset...`);

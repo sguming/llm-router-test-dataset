@@ -6,6 +6,7 @@ interface CLIOptions {
   datasetName: string;
   fileName?: string;
   type: "test" | "loose";
+  limit?: number;
 }
 
 const langsmith = new Client();
@@ -34,24 +35,37 @@ export function parseArgs(): CLIOptions {
       process.exit(0);
     }
 
+    console.log(`🔍 DEBUG: Raw args = ${JSON.stringify(process.argv.slice(2))}`);
+    
+    // Remove the first "--" if present (npm/pnpm adds it)
+    const cleanArgs = process.argv.slice(2);
+    if (cleanArgs[0] === "--") {
+      cleanArgs.shift();
+    }
+    console.log(`🔍 DEBUG: Clean args = ${JSON.stringify(cleanArgs)}`);
+    
     const { values, positionals } = parseNodeArgs({
-      args: process.argv.slice(2),
+      args: cleanArgs,
       options: {
-        fileName: {
+        "file-name": {
           type: "string",
-          short: "f", // full name is --fileName and short name is -f
-          description:
-            "Prefix of the test data file (e.g., 'faq' for faq_test.json)",
+          short: "f",
         },
         type: {
+          type: "string", 
+          short: "t",
+        },
+        limit: {
           type: "string",
-          short: "t", // full name is --type and short name is -t
-          description: "Dataset type: 'test' or 'loose' (defaults to 'test')",
+          short: "n",
         },
       },
       allowPositionals: true,
-      strict: true,
+      strict: false,
     });
+    
+    console.log(`🔍 DEBUG: Parsed values = ${JSON.stringify(values)}`);
+    console.log(`🔍 DEBUG: Parsed positionals = ${JSON.stringify(positionals)}`);
 
     // Validate required datasetName
     if (positionals.length === 0) {
@@ -68,10 +82,16 @@ export function parseArgs(): CLIOptions {
       type = validateType(typeValue);
     }
 
+    const limit = values.limit ? Number(values.limit) : undefined;
+
+    console.log(`🔍 DEBUG: Parsed limit = ${limit} (from values.limit = ${values.limit})`);
+    console.log(`🔍 DEBUG: Parsed fileName = ${values["file-name"]} (from values.file-name)`);
+
     return {
       datasetName,
-      fileName: values.fileName,
+      fileName: values["file-name"],
       type,
+      limit,
     };
   } catch (error) {
     if (error instanceof Error && error.message.includes("Unknown option")) {
@@ -85,11 +105,14 @@ export function parseArgs(): CLIOptions {
 
 async function main() {
   try {
-    const { datasetName, fileName, type } = parseArgs();
+    const { datasetName, fileName, type, limit } = parseArgs();
 
     console.log(`🚀 Starting dataset creation...`);
     console.log(`📊 Dataset Name: ${datasetName}`);
     console.log(`🔧 Dataset Type: ${type}`);
+    if (limit) {
+      console.log(`🔢 Per-file Limit: ${limit}`);
+    }
 
     if (fileName) {
       console.log(`📁 File Prefix: ${fileName}`);
@@ -106,7 +129,7 @@ async function main() {
       client: langsmith,
       datasetName,
       fileName,
-      config: { type },
+      config: { type, limit },
     });
 
     console.log(`✅ Dataset created successfully!`);
