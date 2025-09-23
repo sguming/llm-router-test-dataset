@@ -15,9 +15,31 @@ type RunResult = {
   confidence: number;
 };
 
-export async function generateReport({ datasetName }: { datasetName: string }) {
+type generateReportParams = {
+  datasetName: string;
+  config?: {
+    experimentPrefix?: string;
+    concurrency?: "none" | "low" | "high";
+  };
+};
+
+const concurrencyMapping = {
+  none: 1,
+  low: 5,
+  high: 20,
+} as const;
+
+export async function generateReport(params: generateReportParams) {
+  const { datasetName, config } = params;
+  const { experimentPrefix, concurrency } = config ?? {};
+  const maxConcurrency = concurrencyMapping[concurrency ?? "low"];
+
   const { results } = await intentClassifierEvaluation({
     datasetName,
+    config: {
+      experimentPrefix,
+      maxConcurrency,
+    },
   });
 
   // results: ExperimentResultRow[]
@@ -59,8 +81,9 @@ Generated Output: ${generatedOutput}`,
   }
 
   // report per intent
-  const intentReports: { intent: Intent; report: string }[] = [];
   const resultsPerIntent: Map<Intent, RunResult[]> = new Map();
+  const intentReports: { intent: Intent; report: string }[] = [];
+  let finalReport = "";
   // group failed (cleaned) results by intent
   if (cleanedResults.length > 0) {
     // for each intent (expected output), generate a report
@@ -72,37 +95,42 @@ Generated Output: ${generatedOutput}`,
       }
       resultsPerIntent.get(intent)?.push(result);
     }
+
+    for (const [intent, runResults] of resultsPerIntent) {
+      const report = await generateIntentReport({
+        intent,
+        results: runResults,
+      });
+      intentReports.push({ intent, report });
+    }
+
+    finalReport = `# 任务：优化意图的识别能力
+  
+  **背景：**
+  你是一个专注于大语言模型提示词优化的AI助手。当前，模型在识别用户意图时出现了一些错误。
+  
+  **失败案例数据：**
+  ${intentReports.map((report) => report.report).join("\n")}
+  
+  **你的任务：**
+  基于以上失败案例，请完成以下一项或多项任务：
+  1.  **模式分析：** 总结导致模型错误分类的可能原因或共同模式（例如，是否因为输入中包含某些特定词汇？）。
+  2.  **数据增强建议：** 提供3-5个新的、高质量的训练样本，这些样本应该能帮助模型更好地区分 \`<intent>\` 和其他意图。
+  3.  **意图定义修正：** 如果你认为 \`<intent>\` 的定义本身存在模糊地带，请提出修正建议。
+  `;
+
+    // create directory if not exists
+    await mkdir(`./evaluation/reports`, { recursive: true });
+
+    // write to file
+    await writeFile(
+      `./evaluation/reports/${datasetName}.md`,
+      finalReport,
+      "utf-8"
+    );
+  } else {
+    finalReport = `所有意图都正确分类，没有错误案例。`;
   }
-
-  for (const [intent, runResults] of resultsPerIntent) {
-    const report = await generateIntentReport({ intent, results: runResults });
-    intentReports.push({ intent, report });
-  }
-
-  const finalReport = `# 任务：优化意图的识别能力
-
-**背景：**
-你是一个专注于大语言模型提示词优化的AI助手。当前，模型在识别用户意图时出现了一些错误。
-
-**失败案例数据：**
-${intentReports.map((report) => report.report).join("\n")}
-
-**你的任务：**
-基于以上失败案例，请完成以下一项或多项任务：
-1.  **模式分析：** 总结导致模型错误分类的可能原因或共同模式（例如，是否因为输入中包含某些特定词汇？）。
-2.  **数据增强建议：** 提供3-5个新的、高质量的训练样本，这些样本应该能帮助模型更好地区分 \`<intent>\` 和其他意图。
-3.  **意图定义修正：** 如果你认为 \`<intent>\` 的定义本身存在模糊地带，请提出修正建议。
-`;
-
-  // create directory if not exists
-  await mkdir(`./evaluation/reports`, { recursive: true });
-
-  // write to file
-  await writeFile(
-    `./evaluation/reports/${datasetName}.md`,
-    finalReport,
-    "utf-8"
-  );
 
   return {
     finalReport,
@@ -170,8 +198,3 @@ async function loadIntentDefinition(intent: Intent): Promise<string> {
     throw error;
   }
 }
-
-const result = await generateReport({
-  datasetName: "intent_event_dataset",
-});
-console.log(result);
