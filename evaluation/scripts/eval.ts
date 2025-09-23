@@ -33,14 +33,20 @@ export async function intentClassifierEvaluation(
   ];
 
   const result = await evaluate(
-    async (inputs) => {
-      const { intent } = await classifyIntent({
+    async (inputs: { input: string }) => {
+      const { intent, confidence } = await classifyIntent({
         user_query: inputs.input,
         chat_history: chatHistory ?? "N/A",
         most_recent_intent: mostRecentIntent ?? "N/A",
       });
 
-      return intent;
+      // always return everything in the schema
+      // change evaluator's params to match the schema
+
+      // 1. return intent (string) ONLY - in the params of the evaluator's function: outputs: { outputs: '<intent>' }
+      // It adds the field "outputs" automatically
+      // 2. return object { intent, confidence } - in the params of the evaluator's function: outputs: { intent: '<intent>', confidence: '<confidence>' }
+      return { intent, confidence };
     },
     {
       data: datasetName,

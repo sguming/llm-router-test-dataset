@@ -18,10 +18,15 @@ export function strictEqualEvaluator(
 ): EvaluationResult {
   const { outputs, referenceOutputs } = params;
 
-  // outputs: { outputs: '<intent>' }
+  // outputs:
+  // refer to the return type from the evaluate function's callback - { intent, confidence }
+  // outputs: { intent: '<intent>', confidence: '<confidence>' }
+
+  // referenceOutputs:
+  // refer to the data formatter outputs: { intent: '<intent>' }
   // referenceOutputs: { intent: '<intent>' }
 
-  const score = outputs.outputs === referenceOutputs?.intent;
+  const score = outputs.intent === referenceOutputs?.intent;
 
   return {
     key: "strict_equal",
