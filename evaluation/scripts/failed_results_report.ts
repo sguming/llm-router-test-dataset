@@ -160,6 +160,3 @@ async function loadIntentDefinition(intent: Intent): Promise<string> {
     throw error;
   }
 }
-
-const result = await generateReport();
-console.log(result);
