@@ -1,4 +1,4 @@
-import { readdir, readFile } from "fs/promises";
+import { mkdir, readdir, readFile, writeFile } from "fs/promises";
 import { intentClassificationOutputSchema } from "../../src/intent_classifier/schema.js";
 import { intentClassifierEvaluation } from "./eval.js";
 import { FILE_PATHS } from "../../src/constants/index.js";
@@ -15,9 +15,9 @@ type RunResult = {
   confidence: number;
 };
 
-export async function generateReport() {
+export async function generateReport({ datasetName }: { datasetName: string }) {
   const { results } = await intentClassifierEvaluation({
-    datasetName: "intent_classification_experiment",
+    datasetName,
   });
 
   // results: ExperimentResultRow[]
@@ -94,6 +94,16 @@ ${intentReports.map((report) => report.report).join("\n")}
 3.  **意图定义修正：** 如果你认为 \`<intent>\` 的定义本身存在模糊地带，请提出修正建议。
 `;
 
+  // create directory if not exists
+  await mkdir(`./evaluation/reports`, { recursive: true });
+
+  // write to file
+  await writeFile(
+    `./evaluation/reports/${datasetName}.md`,
+    finalReport,
+    "utf-8"
+  );
+
   return {
     finalReport,
     intentReports,
@@ -124,7 +134,7 @@ async function generateIntentReport(
 | :--- | :------------- | :------------------ | :------------------- | :------------------ |
 ${tableRows.join("\n")}
 
-"${intent}"意图定义:
+**"${intent}"意图定义:**
 ${intentDefinition}
   `;
 }
@@ -160,3 +170,8 @@ async function loadIntentDefinition(intent: Intent): Promise<string> {
     throw error;
   }
 }
+
+const result = await generateReport({
+  datasetName: "intent_event_dataset",
+});
+console.log(result);
