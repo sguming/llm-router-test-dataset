@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { evaluate } from "langsmith/evaluation";
 import { classifyIntent } from "../../src/intent_classifier/index.js";
 import { strictEqualEvaluator } from "./evaluator.js";
