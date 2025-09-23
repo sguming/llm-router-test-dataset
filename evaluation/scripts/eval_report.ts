@@ -34,7 +34,7 @@ export async function generateReport(params: generateReportParams) {
   const { experimentPrefix, concurrency } = config ?? {};
   const maxConcurrency = concurrencyMapping[concurrency ?? "low"];
 
-  const { results } = await intentClassifierEvaluation({
+  const { results, count } = await intentClassifierEvaluation({
     datasetName,
     config: {
       experimentPrefix,
@@ -49,6 +49,9 @@ export async function generateReport(params: generateReportParams) {
   const failedResults = results.filter(
     (result) => !result.evaluationResults.results[0].score
   );
+
+  const benchmark: number = (count - failedResults.length) / count;
+  const benchmarkPercentage: string = `${benchmark * 100}%`;
 
   const cleanedResults: RunResult[] = [];
   for (let index = 0; index < failedResults.length; index++) {
@@ -109,6 +112,13 @@ Generated Output: ${generatedOutput}`,
   **背景：**
   你是一个专注于大语言模型提示词优化的AI助手。当前，模型在识别用户意图时出现了一些错误。
   
+  **基准：**
+  | 总案例 | 正确案例 | 错误案例 | 基准 |
+  | :--- | :--- | :--- | :--- |
+  | ${count} | ${count - failedResults.length} | ${
+      failedResults.length
+    } | ${benchmarkPercentage} |
+
   **失败案例数据：**
   ${intentReports.map((report) => report.report).join("\n")}
   
@@ -136,6 +146,7 @@ Generated Output: ${generatedOutput}`,
     finalReport,
     intentReports,
     resultsPerIntent,
+    benchmark,
   };
 }
 
@@ -161,6 +172,7 @@ async function generateIntentReport(
 | 运行 | 输入 (Input) | 预期输出 (Expected) | 实际输出 (Generated) | 置信度 (Confidence) |
 | :--- | :------------- | :------------------ | :------------------- | :------------------ |
 ${tableRows.join("\n")}
+
 
 **"${intent}"意图定义:**
 ${intentDefinition}
