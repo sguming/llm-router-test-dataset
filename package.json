@@ -11,6 +11,7 @@
     "test:coverage": "vitest --coverage",
     "create:dataset": "tsx evaluation/scripts/create_dataset_command.ts",
     "eval:report": "tsx evaluation/scripts/eval_report_command.ts",
+    "langsmith:basic": "tsx evaluation/scripts/langsmith_basic_commands.ts",
     "show:prompt": "tsx prompts/show_prompt.ts"
   },
   "repository": {
