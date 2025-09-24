@@ -241,7 +241,7 @@ pnpm run eval:report <datasetName> [--concurrency <concurrency>]
 
 progress.md 笔记格式
 
-## 步骤
+## 步骤(包括子步骤)
 
 [x] 1. xxxxx
 [ ] 2. yyyyy
