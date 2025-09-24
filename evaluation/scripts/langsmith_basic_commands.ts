@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { parseArgs as parseNodeArgs } from "node:util";
 import { Dataset } from "langsmith";
 import { langsmith } from "../client.js";
