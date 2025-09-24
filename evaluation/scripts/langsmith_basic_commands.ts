@@ -10,48 +10,48 @@ const HELP_MESSAGE = `
 📖 Usage:    langsmith:basic --operation <operation> [-o <operation>]
 📖 Usage:    langsmith:basic <operation> [--help]
 
-📝 Examples: langsmith:basic list-databases
-             langsmith:basic --operation list-databases
+📝 Examples: langsmith:basic list-datasets
+             langsmith:basic --operation list-datasets
              langsmith:basic --help
 
 🔍 Options:  --operation, -o  Operation to perform (required)
              --help, -h      Show this help message
 
 📋 Available Operations:
-  list-databases    List all available databases/datasets
+  list-datasets    List all available datasets
 
 📋 Description: Perform basic LangSmith operations like listing datasets.
 `;
 
 // Available operations
 const OPERATIONS = {
-  "list-databases": listDatabases,
+  "list-datasets": listDatasets,
 } as const;
 
 type OperationName = keyof typeof OPERATIONS;
 
-async function listDatabases() {
+async function listDatasets() {
   const datasets = langsmith.listDatasets(); // returns AsyncIterable<Dataset>
-  const databaseList: Dataset[] = [];
-  console.log("📊 Available Databases:\n");
+  const datasetList: Dataset[] = [];
+  console.log("📊 Available Datasets:\n");
 
   for await (const dataset of datasets) {
-    console.log(`📀 Database: ${dataset.name}`);
+    console.log(`📀 Dataset: ${dataset.name}`);
     console.log(`📊 ID: ${dataset.id}`);
     console.log(`📄 Description: ${dataset.description}`);
     console.log(`📅 Created At: ${dataset.created_at}`);
     console.log(`📅 Updated At: ${dataset.modified_at}`);
     console.log(`--------------------------------`);
-    databaseList.push(dataset);
+    datasetList.push(dataset);
   }
 
-  if (databaseList.length === 0) {
-    console.log("❌ No databases found.");
+  if (datasetList.length === 0) {
+    console.log("❌ No datasets found.");
   } else {
-    console.log(`✅ Found ${databaseList.length} database(s)`);
+    console.log(`✅ Found ${datasetList.length} dataset(s)`);
   }
 
-  return databaseList;
+  return datasetList;
 }
 
 // Parse command line arguments
