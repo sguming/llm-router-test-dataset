@@ -42,6 +42,7 @@ async function listDatasets() {
     console.log(`📄 Description: ${dataset.description}`);
     console.log(`📅 Created At: ${dataset.created_at}`);
     console.log(`📅 Updated At: ${dataset.modified_at}`);
+    console.log(`📈 Size: ${dataset.example_count}`);
     console.log(`--------------------------------`);
     datasetList.push(dataset);
   }
