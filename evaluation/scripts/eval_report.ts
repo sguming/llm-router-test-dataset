@@ -129,17 +129,11 @@ Generated Output: ${generatedOutput}`,
   3.  **意图定义修正：** 如果你认为 \`<intent>\` 的定义本身存在模糊地带，请提出修正建议。
   `;
 
-    // create directory if not exists
-    await mkdir(`./evaluation/reports`, { recursive: true });
-
-    // write to file
-    await writeFile(
-      `./evaluation/reports/${datasetName}.md`,
-      finalReport,
-      "utf-8"
-    );
+    await writeReport({ datasetName, content: finalReport });
   } else {
     finalReport = `所有意图都正确分类，没有错误案例。`;
+
+    await writeReport({ datasetName, content: finalReport });
   }
 
   return {
@@ -207,6 +201,26 @@ async function loadIntentDefinition(intent: Intent): Promise<string> {
     return content;
   } catch (error) {
     console.error(error);
+    throw error;
+  }
+}
+
+const BASE_REPORT_DIR = "./evaluation/reports";
+
+async function writeReport(args: { datasetName: string; content: string }) {
+  const { datasetName, content } = args;
+  try {
+    // create directory if not exists
+    await mkdir(BASE_REPORT_DIR, { recursive: true });
+
+    // write to file
+    await writeFile(`${BASE_REPORT_DIR}/${datasetName}.md`, content, "utf-8");
+  } catch (error) {
+    console.error(
+      `❌ Error: Failed to write report to ${datasetName}.md ${
+        error instanceof Error ? error.message : error
+      }`
+    );
     throw error;
   }
 }
