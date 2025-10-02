@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/bianbianzhu/llm-router-test-dataset#readme",
   "dependencies": {
+    "@google/genai": "^1.21.0",
     "@langchain/community": "^0.3.56",
     "@langchain/core": "^0.3.77",
     "@langchain/openai": "^0.6.13",
