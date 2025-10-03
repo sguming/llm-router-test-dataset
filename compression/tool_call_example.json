@@ -1,0 +1,37 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "<example_thought_signature>",
+            "functionCall": {
+              "args": {
+                "brightness": 20,
+                "color_temp": "warm"
+              },
+              "name": "set_light_values"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "modelVersion": "gemini-2.5-flash",
+  "responseId": "tTneaO6cN4_N1e8Pj_rSsQg",
+  "usageMetadata": {
+    "promptTokenCount": 118,
+    "candidatesTokenCount": 25,
+    "totalTokenCount": 350,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 118
+      }
+    ],
+    "thoughtsTokenCount": 207
+  }
+}
