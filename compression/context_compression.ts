@@ -1,3 +1,8 @@
+import {
+  GenerateContentParameters,
+  GenerateContentResponse,
+  GoogleGenAI,
+} from "@google/genai";
 import { encoding_for_model, TiktokenModel } from "tiktoken";
 
 const MAX_TURNS = 100;
@@ -16,7 +21,7 @@ const COMPRESSION_TOKEN_THRESHOLD = 0.7;
  */
 const COMPRESSION_PRESERVE_THRESHOLD = 0.3;
 
-const DEFAULT_MODEL = "gpt-5";
+const DEFAULT_MODEL = "gemini-2.5-pro";
 
 interface ChatCompressionInfo {
   originalTokenCount: number;
@@ -43,8 +48,9 @@ export class BaseClient {
    * At any point in this conversation, did compression fail?
    */
   #hasFailedCompressionAttempt: boolean = false;
-  #model: TiktokenModel = DEFAULT_MODEL;
+  #model: string = DEFAULT_MODEL;
   #history: Content[] = [];
+  #chat: Content[] = [];
 
   constructor({ history }: { history: Content[] }) {
     this.#history = history;
@@ -82,7 +88,7 @@ export class BaseClient {
     return structuredClone(history);
   }
 
-  async tryCompressChat(prompt_id: string): Promise<ChatCompressionInfo> {
+  async tryCompressChat(): Promise<ChatCompressionInfo> {
     // 拿到历史对话
     const curatedHistory = this.getHistory(true);
 
@@ -96,11 +102,11 @@ export class BaseClient {
       };
     }
 
-    const originalTokenCount = countTokens(curatedHistory, this.#model);
+    const originalTokenCount = countTokens(curatedHistory, "gpt-4o");
 
     // don't compress if we are under the limit.
     const threshold = COMPRESSION_TOKEN_THRESHOLD;
-    if (originalTokenCount < threshold * tokenLimit(this.#model)) {
+    if (originalTokenCount < threshold * tokenLimitTest(this.#model)) {
       return {
         originalTokenCount,
         newTokenCount: originalTokenCount,
@@ -116,31 +122,33 @@ export class BaseClient {
     const historyToCompress = curatedHistory.slice(0, splitPoint);
     const historyToKeep = curatedHistory.slice(splitPoint);
 
-    const summaryResponse = await this.#config
-      .getContentGenerator()
-      .generateContent(
+    const ai = new GoogleGenAI({
+      apiKey: process.env.GEMINI_API_KEY,
+    });
+
+    const params: GenerateContentParameters = {
+      model: this.#model,
+      contents: [
+        ...historyToCompress,
         {
-          model: this.#model,
-          contents: [
-            ...historyToCompress,
+          role: "user",
+          parts: [
             {
-              role: "user",
-              parts: [
-                {
-                  text: "First, reason in your scratchpad. Then, generate the <state_snapshot>.",
-                },
-              ],
+              text: "First, reason in your scratchpad. Then, generate the <state_snapshot>.",
             },
           ],
-          config: {
-            systemInstruction: { text: getCompressionPrompt() },
-          },
         },
-        prompt_id
-      );
+      ],
+      config: {
+        systemInstruction: { text: getCompressionPrompt() },
+      },
+    };
+
+    const summaryResponse = await ai.models.generateContent(params);
+
     const summary = getResponseText(summaryResponse) ?? "";
 
-    const chat = await this.startChat([
+    const chat: Content[] = [
       {
         role: "user",
         parts: [{ text: summary }],
@@ -150,27 +158,30 @@ export class BaseClient {
         parts: [{ text: "Got it. Thanks for the additional context!" }],
       },
       ...historyToKeep,
-    ]);
-    this.forceFullIdeContext = true;
+    ];
 
     // Estimate token count 1 token ≈ 4 characters
     const newTokenCount = Math.floor(
-      chat
-        .getHistory()
-        .reduce((total, content) => total + JSON.stringify(content).length, 0) /
-        4
+      chat.reduce(
+        (total, content) => total + JSON.stringify(content).length,
+        0
+      ) / 4
     );
 
-    logChatCompression(
-      this.config,
-      makeChatCompressionEvent({
-        tokens_before: originalTokenCount,
-        tokens_after: newTokenCount,
-      })
-    );
+    const tiktokenNewTokenCount = countTokens(chat, "gpt-4o");
+    console.log("tiktokenNewTokenCount: ", tiktokenNewTokenCount);
+
+    console.log({
+      tokens_before: originalTokenCount,
+      tokens_after: newTokenCount,
+    });
 
     if (newTokenCount > originalTokenCount) {
       this.#hasFailedCompressionAttempt = true;
+      console.log(
+        "hasFailedCompressionAttempt: ",
+        this.#hasFailedCompressionAttempt
+      );
       return {
         originalTokenCount,
         newTokenCount,
@@ -178,8 +189,8 @@ export class BaseClient {
           CompressionStatus.COMPRESSION_FAILED_INFLATED_TOKEN_COUNT,
       };
     } else {
-      this.chat = chat; // Chat compression successful, set new state.
-      uiTelemetryService.setLastPromptTokenCount(newTokenCount);
+      this.#chat = chat; // Chat compression successful, set new state.
+      console.log("chat: ", JSON.stringify(this.#chat, null, 2));
     }
 
     return {
@@ -207,6 +218,26 @@ function tokenLimit(model: string): number {
       return 1_048_576;
     case "gemini-2.0-flash-preview-image-generation":
       return 32_000;
+    default:
+      return DEFAULT_TOKEN_LIMIT;
+  }
+}
+
+function tokenLimitTest(model: string): number {
+  switch (model) {
+    case "gemini-1.5-pro":
+      return 128;
+    case "gemini-1.5-flash":
+    case "gemini-2.5-pro-preview-05-06":
+    case "gemini-2.5-pro-preview-06-05":
+    case "gemini-2.5-pro":
+    case "gemini-2.5-flash-preview-05-20":
+    case "gemini-2.5-flash":
+    case "gemini-2.5-flash-lite":
+    case "gemini-2.0-flash":
+      return 512;
+    case "gemini-2.0-flash-preview-image-generation":
+      return 128;
     default:
       return DEFAULT_TOKEN_LIMIT;
   }
@@ -375,6 +406,7 @@ function getCompressionPrompt(): string {
   `.trim();
 }
 
+// 获取响应文本
 function getResponseText(response: GenerateContentResponse): string | null {
   if (response.candidates && response.candidates.length > 0) {
     const candidate = response.candidates[0];

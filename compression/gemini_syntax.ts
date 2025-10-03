@@ -10,6 +10,7 @@ import {
   Type,
 } from "@google/genai";
 import { Ajv, AnySchema, ErrorObject } from "ajv";
+import { BaseClient } from "./context_compression.js";
 
 // Define a function that the model can call to control smart lights
 const setLightValuesFunctionDeclaration: FunctionDeclaration = {
@@ -137,6 +138,14 @@ const response2 = await ai.models.generateContent({
 contents.push(response2.candidates?.[0]?.content!);
 
 console.log("contents: ", JSON.stringify(contents, null, 2));
+
+const client = new BaseClient({
+  history: contents,
+});
+
+const compressionInfo = await client.tryCompressChat();
+
+console.log(compressionInfo);
 
 /**
  * @param {unknown} args - The arguments to validate
