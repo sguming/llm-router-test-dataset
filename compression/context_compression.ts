@@ -271,16 +271,18 @@ function findCompressSplitPoint(contents: Content[], fraction: number): number {
   const targetCharCount = totalCharCount * fraction; // 0.7
 
   let lastSplitPoint = 0; // 0 is always valid (compress nothing)
-  let cumulativeCharCount = 0;
+  let cumulativeCharCount = 0; // 累计字符数
   // 步骤2: 仅把“用户消息且不包含 functionResponse 的条目”视为安全分割点；沿着历史从头累加字符数，超过目标后在最近的安全分割点切分。
   for (let i = 0; i < contents.length; i++) {
     const content = contents[i];
     // 2.1 如果内容为用户消息且不包含 functionResponse，则视为安全分割点
+    // Gemini当中，function result 就是一个用户消息with functionResponse
     if (
       content.role === "user" &&
       !content.parts?.some((part) => !!part.functionResponse)
     ) {
       // 2.1.1 如果累计长度大于等于需要压缩的内容长度，则返回当前索引
+      // 该累计长度是上一轮（即当前这个安全分割点之前的所有内容：可压缩节）的字符数总和
       if (cumulativeCharCount >= targetCharCount) {
         return i;
       }

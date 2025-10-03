@@ -146,6 +146,68 @@ function main(): void {
     0.6
   );
 
+  const compressLastSplitPoint: Content[] = [
+    { role: "user", parts: [{ text: "A" }] },
+    { role: "model", parts: [{ text: "B" }] },
+    { role: "user", parts: [{ text: "C" }] },
+    { role: "model", parts: [{ text: "D" }] },
+    { role: "user", parts: [{ text: "E" }] },
+    { role: "model", parts: [{ text: "F" }] },
+  ];
+  runScenario(
+    "Scenario 5: Compress last split point",
+    compressLastSplitPoint,
+    0.6
+  );
+
+  // edge case scenarios
+  const onlyOneUser: Content[] = [{ role: "user", parts: [{ text: "A" }] }];
+  runScenario("Scenario 6: Only one user message", onlyOneUser, 0.7);
+
+  const hypothetical: Content[] = [
+    { role: "user", parts: [{ text: "A11" }] },
+    { role: "model", parts: [{ text: "B1" }] },
+    { role: "user", parts: [{ text: "C11" }] },
+    { role: "model", parts: [{ text: "D1" }] },
+    { role: "user", parts: [{ text: "E11" }] },
+    { role: "model", parts: [{ text: "F1" }] },
+    { role: "user", parts: [{ text: "G11" }] },
+    { role: "model", parts: [{ text: "H1" }] },
+    { role: "user", parts: [{ text: "I11" }] },
+    { role: "model", parts: [{ text: "J1" }] },
+  ];
+  runScenario("Scenario 7: Hypothetical", hypothetical, 0.95);
+
+  const hypothetical2: Content[] = [
+    { role: "user", parts: [{ text: "A22" }] },
+    { role: "model", parts: [{ text: "B2" }] },
+    { role: "user", parts: [{ text: "C22" }] },
+    { role: "model", parts: [{ text: "D2" }] },
+    { role: "user", parts: [{ text: "E22" }] },
+    { role: "model", parts: [{ text: "F2" }] },
+    { role: "user", parts: [{ text: "G22" }] },
+    { role: "model", parts: [{ text: "H2" }] },
+    { role: "user", parts: [{ text: "I22" }] },
+    { role: "model", parts: [{ functionCall: { name: "toolX" } }] },
+  ];
+  runScenario("Scenario 8: Hypothetical2", hypothetical2, 0.95);
+
+  const hypothetical3: Content[] = [
+    { role: "user", parts: [{ text: "A22" }] },
+    { role: "model", parts: [{ text: "B2" }] },
+    { role: "user", parts: [{ text: "C22" }] },
+    { role: "model", parts: [{ text: "D2", functionCall: { name: "toolX" } }] },
+    { role: "user", parts: [{ functionResponse: { result: "data" } }] },
+    { role: "model", parts: [{ text: "F2" }] },
+    { role: "user", parts: [{ text: "G22" }] },
+    { role: "model", parts: [{ functionCall: { name: "toolY" } }] },
+    { role: "user", parts: [{ functionResponse: { result: "data" } }] },
+    { role: "model", parts: [{ text: "F2" }] },
+    { role: "user", parts: [{ text: "H22" }] },
+    { role: "model", parts: [{ text: "I2" }] },
+  ];
+  runScenario("Scenario 9: Hypothetical3", hypothetical3, 0.6);
+
   try {
     findCompressSplitPoint(base, 1);
   } catch (e) {
